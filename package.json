@@ -34,7 +34,8 @@
     "/lib",
     "/bin",
     "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/oclif.manifest.json",
+    "/messages"
   ],
   "homepage": "https://github.com/contentstack/cli-cm-regex-validate",
   "keywords": [
