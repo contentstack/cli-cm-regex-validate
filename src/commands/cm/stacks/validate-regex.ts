@@ -7,6 +7,7 @@ import * as jsonexport from 'jsonexport'
 import * as path from 'path'
 import * as fs from 'fs'
 import safeRegexCheck from '../../../utils/safe-regex'
+import {inquireAlias, inquireModule} from '../../../utils/interactive'
 const regexMessages = require('../../../../messages/index.json').validateRegex
 const config = new Configstore('contentstack_cli')
 
@@ -42,12 +43,16 @@ export default class CmStacksValidateRegex extends Command {
 
     const command = new CSCommand()
 
+    await inquireAlias(flags, regexMessages)
+
     let tokenDetails: any
     try {
       tokenDetails = command.getToken(flags.alias)
     } catch (error) {
       this.error(regexMessages.tokenNotFound)
     }
+
+    await inquireModule(flags, regexMessages)
 
     cli.action.start(regexMessages.cliAction.connectStackStart, '', {stdout: true})
 
