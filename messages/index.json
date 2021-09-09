@@ -2,25 +2,29 @@
     "validateRegex": {
         "requireToken": "Enter Token Alias to be used",
         "required": "Required",
-        "tokenNotFound": "Token not found, save using csdx auth:tokens:add",
         "tokenDetails": "Token Details: ",
         "selectSchema": "Select Schema to be Checked",
         "selectOne": "Select atleast one Option",
         "cliAction": {
             "connectStackStart": "Connecting Stack",
-            "connectStackStop": "Stack Connection Established",
+            "connectStackStop": "Stack Connection Established. Time taken: ",
             "processStackStart": "Processing Stack",
-            "processStackStop": "Stack Processing Completed"
+            "processStackStop": "Stack Processing Completed. Time taken: "
         },
         "errors": {
+            "login": "Authorization failed, you're not logged in, login using csdx auth:login",
+            "tokenNotFound": "Management Token Alias not found, save using csdx auth:tokens:add",
+            "stack": {
+                "fetch": "Error in connecting to Stack",
+                "apiKey": "Invalid API Key"
+            },
             "contentTypes": "Error in Querying Content Types",
             "globalFields": "Error in Querying Global Fields",
-            "csvOutput": "Generate CSV Output failed",
-            "stacks": "Error in fetching Stack."
+            "csvOutput": "Generate CSV Output failed"
         },
         "tableOutput": "The following Table shows the details of Invalid Regex in your Stack",
         "csvOutput": "Csv Output stored successfully at:",
         "noInvalidRegex": "There are no Invalid Regex in your Stack",
-        "docsLink": "To know more, check out our Official Documentation:"
+        "docsLink": "To know more, check out our Official Documentation: https://www.contentstack.com/docs/developers/create-content-types/validation-regex/#prevent-catastrophic-backtracking"
     }
 }
