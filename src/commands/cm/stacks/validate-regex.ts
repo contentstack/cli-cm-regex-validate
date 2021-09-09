@@ -8,6 +8,7 @@ import * as path from 'path'
 import * as fs from 'fs'
 import getAuthToken from '../../../utils/get-auth-token'
 import {inquireAlias, inquireModule} from '../../../utils/interactive'
+import getManagementToken from '../../../utils/get-management-token'
 import safeRegexCheck from '../../../utils/safe-regex'
 const regexMessages = require('../../../../messages/index.json').validateRegex
 const config = new Configstore('contentstack_cli')
@@ -57,9 +58,11 @@ export default class CmStacksValidateRegex extends Command {
 
     let tokenDetails: any
     try {
-      tokenDetails = command.getToken(flags.alias)
+      tokenDetails = await getManagementToken(flags.alias)
     } catch (error) {
-      this.error(regexMessages.tokenNotFound)
+      this.error(regexMessages.errors.tokenNotFound, {
+        ref: 'https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/#add-management-token',
+      })
     }
 
     await inquireModule(flags, regexMessages)
