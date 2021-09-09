@@ -16,7 +16,7 @@
             "contentTypes": "Error in Querying Content Types",
             "globalFields": "Error in Querying Global Fields",
             "csvOutput": "Generate CSV Output failed",
-            "stacks": "Error in fetching Stack"
+            "stacks": "Error in fetching Stack."
         },
         "tableOutput": "The following Table shows the details of Invalid Regex in your Stack",
         "csvOutput": "Csv Output stored successfully at:",
