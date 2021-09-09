@@ -6,8 +6,9 @@ import * as Configstore from 'configstore'
 import * as jsonexport from 'jsonexport'
 import * as path from 'path'
 import * as fs from 'fs'
-import safeRegexCheck from '../../../utils/safe-regex'
+import getAuthToken from '../../../utils/get-auth-token'
 import {inquireAlias, inquireModule} from '../../../utils/interactive'
+import safeRegexCheck from '../../../utils/safe-regex'
 const regexMessages = require('../../../../messages/index.json').validateRegex
 const config = new Configstore('contentstack_cli')
 
@@ -43,6 +44,15 @@ export default class CmStacksValidateRegex extends Command {
 
     const command = new CSCommand()
 
+    let authToken
+    try {
+      authToken = await getAuthToken()
+    } catch (error) {
+      this.error(regexMessages.errors.login, {
+        ref: 'https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/#login',
+      })
+    }
+
     await inquireAlias(flags, regexMessages)
 
     let tokenDetails: any
@@ -54,6 +64,7 @@ export default class CmStacksValidateRegex extends Command {
 
     await inquireModule(flags, regexMessages)
 
+    const startTime = Date.now()
     cli.action.start(regexMessages.cliAction.connectStackStart, '', {stdout: true})
 
     const client = contentstackSdk.client({
@@ -62,7 +73,8 @@ export default class CmStacksValidateRegex extends Command {
 
     const stack = client.stack({api_key: tokenDetails.apiKey})
     stack.fetch().then(async (stack: any) => {
-      cli.action.stop(regexMessages.cliAction.connectStackStop)
+      cli.action.stop(regexMessages.cliAction.connectStackStop + (Date.now() - startTime) + ' ms')
+      const processTime = Date.now()
       cli.action.start(regexMessages.cliAction.processStackStart, '', {stdout: true})
       const query = {}
       const invalidRegex: object[] = []
@@ -87,7 +99,7 @@ export default class CmStacksValidateRegex extends Command {
           this.log(regexMessages.errors.globalFields, error)
         })
       }
-      cli.action.stop(regexMessages.cliAction.processStackStop)
+      cli.action.stop(regexMessages.cliAction.processStackStop + (Date.now() - processTime) + ' ms')
       const resultFile = 'results.csv'
       let storagePath = path.resolve(__dirname, '../../../../', resultFile)
       if (flags.filePath && fs.existsSync(flags.filePath)) {
