@@ -16,7 +16,7 @@ export default async function processStack(flags: any, stack: any, startTime: nu
       contentTypes.items.forEach((contentType: any) => {
         safeRegexCheck(contentType, invalidRegex, tableData, 'Content Type')
       })
-    }).catch((error: Error) => {
+    }).catch(() => {
       throw new Error(regexMessages.errors.contentTypes)
     })
   }
@@ -26,7 +26,7 @@ export default async function processStack(flags: any, stack: any, startTime: nu
       globalFields.items.forEach((globalField: any) => {
         safeRegexCheck(globalField, invalidRegex, tableData, 'Global Field')
       })
-    }).catch((error: Error) => {
+    }).catch(() => {
       throw new Error(regexMessages.errors.globalFields)
     })
   }
