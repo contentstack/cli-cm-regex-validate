@@ -5,3 +5,5 @@ fileignoreconfig:
   checksum: d64109e2ab0bf5ca15396f4232ef29e344d48b0669b404759ed03ad959cb24bf
 - filename: src/commands/cm/stacks/validate-regex.ts
   checksum: 60a38392c57ddfd834c0b8204a7b766d53e47681e11e7eb1936bf624a09ee70e
+- filename: src/utils/connect-stack.ts
+  checksum: 05307c5f7af5c30c8f512f522fc67fd9fc22d868933730efbb4e358e0c072f6a
