@@ -14,6 +14,7 @@
     "@types/chai": "^4.2.21",
     "@types/configstore": "^5.0.1",
     "@types/inquirer": "^8.1.1",
+    "@types/jest": "^27.0.1",
     "@types/jsonexport": "^3.0.2",
     "@types/mocha": "^5.2.7",
     "@types/node": "^10.17.60",
@@ -25,6 +26,7 @@
     "globby": "^10.0.2",
     "mocha": "^5.2.0",
     "nyc": "^14.1.1",
+    "ts-jest": "^27.0.5",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.10"
   },
@@ -52,16 +54,18 @@
   },
   "repository": "contentstack/cli-cm-regex-validate",
   "scripts": {
+    "mocha": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "test": "jest --detectOpenHandles --silent",
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
     "@contentstack/cli-command": "^0.1.1-beta.2",
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
+    "jest": "^27.1.1",
     "jsonexport": "^3.2.0",
     "safe-regex": "^1.1.0",
     "tslib": "^1.14.1"
