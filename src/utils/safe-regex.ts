@@ -2,7 +2,7 @@ const safe = require('safe-regex')
 
 const safeRegexCheck = (document: any, invalidRegex: any, tableData: any, type: string) => {
   const beforeCount = invalidRegex.length
-  function checkSchemaFieldRegex(schema: any, currentPath = '', nested: boolean) {
+  function checkSchemaFieldRegex(schema: any, currentPath: string, nested: boolean) {
     let newPath = ''
     function path(currentPath: string, uid: string) {
       return currentPath.trim() === '' ? uid : [currentPath, uid].join('.')
@@ -32,7 +32,7 @@ const safeRegexCheck = (document: any, invalidRegex: any, tableData: any, type: 
             'Module': type,
             'Title': document.title,
             'UID': document.uid,
-            'Field Name': field.display_name,
+            'Field Title': field.display_name,
             'Field UID': field.uid,
             'Field Path': newPath,
             'Invalid Regex': field.format,
