@@ -29,9 +29,9 @@ const safeRegexCheck = (document: any, invalidRegex: any, tableData: any, type: 
           newPath = ''
         } else {
           const regexObject = {
-            'Module Type': type,
-            'Module Name': document.title,
-            'Module UID': document.uid,
+            'Module': type,
+            'Title': document.title,
+            'UID': document.uid,
             'Field Name': field.display_name,
             'Field UID': field.uid,
             'Field Path': newPath,
@@ -47,9 +47,9 @@ const safeRegexCheck = (document: any, invalidRegex: any, tableData: any, type: 
     const currentCount = invalidRegex.length - beforeCount
     if (currentCount > 0 && !nested) {
       const tableDataObject = {
-        'Module Type': type,
-        'Module Name': document.title,
-        'Module UID': document.uid,
+        'Module': type,
+        'Title': document.title,
+        'UID': document.uid,
         'Invalid Regex Count': currentCount,
       }
       tableData.push(tableDataObject)
