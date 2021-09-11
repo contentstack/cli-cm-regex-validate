@@ -7,3 +7,5 @@ fileignoreconfig:
   checksum: 60a38392c57ddfd834c0b8204a7b766d53e47681e11e7eb1936bf624a09ee70e
 - filename: src/utils/connect-stack.ts
   checksum: 05307c5f7af5c30c8f512f522fc67fd9fc22d868933730efbb4e358e0c072f6a
+- filename: test/utils/get-management-token.test.ts
+  checksum: 27bf7650b7264db640f23aa75ce21c4ecfa4f32ddc5caed48952dc12e9c59f41

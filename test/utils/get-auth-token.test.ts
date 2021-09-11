@@ -2,7 +2,7 @@ import getAuthToken from '../../src/utils/get-auth-token'
 import * as Configstore from 'configstore'
 const regexMessages = require('../../messages/index.json').validateRegex
 
-describe('Authorize User', () => {
+describe('Authorize User with Auth Token', () => {
   beforeEach(() => {
     jest.restoreAllMocks()
   })
