@@ -1,0 +1,47 @@
+[
+  {
+    "Module": "Content Type",
+    "Title": "Regex Fields",
+    "UID": "regex_fields",
+    "Field Title": "Regex 1",
+    "Field UID": "regex_1",
+    "Field Path": "regex_1",
+    "Invalid Regex": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?"
+  },
+  {
+    "Module": "Content Type",
+    "Title": "Regex Fields",
+    "UID": "regex_fields",
+    "Field Title": "Group Regex 1",
+    "Field UID": "group_regex_1",
+    "Field Path": "regex_group.group_regex_1",
+    "Invalid Regex": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?"
+  },
+  {
+    "Module": "Content Type",
+    "Title": "Regex Fields",
+    "UID": "regex_fields",
+    "Field Title": "MB Group Regex",
+    "Field UID": "mb_group_regex",
+    "Field Path": "regex_modular_blocks.mb_1.group.mb_group_regex",
+    "Invalid Regex": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?"
+  },
+  {
+    "Module": "Content Type",
+    "Title": "Regex Fields",
+    "UID": "regex_fields",
+    "Field Title": "MB Regex",
+    "Field UID": "mb_regex",
+    "Field Path": "regex_modular_blocks.mb_1.mb_regex",
+    "Invalid Regex": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?"
+  },
+  {
+    "Module": "Content Type",
+    "Title": "Regex Fields",
+    "UID": "regex_fields",
+    "Field Title": "Regex 6",
+    "Field UID": "regex_6",
+    "Field Path": "regex_6",
+    "Invalid Regex": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?"
+  }
+]

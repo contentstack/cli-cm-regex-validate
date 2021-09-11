@@ -1,0 +1,25 @@
+{
+  "title": "Regex Fields",
+  "uid": "regex_fields",
+  "inbuilt_class": false,
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Regex 1",
+      "uid": "regex_1",
+      "format": "(beep|boop)*",
+      "error_messages": {
+        "format": ""
+      }
+    },
+    {
+      "data_type": "text",
+      "display_name": "Regex 2",
+      "uid": "regex_2",
+      "format": "",
+      "error_messages": {
+        "format": ""
+      }
+    }
+  ]
+}

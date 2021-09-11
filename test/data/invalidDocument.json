@@ -1,0 +1,97 @@
+{
+  "title": "Regex Fields",
+  "uid": "regex_fields",
+  "inbuilt_class": false,
+  "schema": [
+    {
+      "data_type": "text",
+      "display_name": "Regex 1",
+      "uid": "regex_1",
+      "format": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?",
+      "error_messages": {
+        "format": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?"
+      }
+    },
+    {
+      "data_type": "text",
+      "display_name": "Regex 2",
+      "uid": "regex_2",
+      "format": "(beep|boop)*",
+      "error_messages": {
+        "format": "(beep|boop)*"
+      }
+    },
+    {
+      "data_type": "group",
+      "display_name": "Regex Group",
+      "schema": [
+        {
+          "data_type": "text",
+          "display_name": "Group Regex 1",
+          "uid": "group_regex_1",
+          "format": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?",
+          "error_messages": {
+            "format": ""
+          }
+        }
+      ],
+      "uid": "regex_group"
+    },
+    {
+      "data_type": "group",
+      "display_name": "Regex Group",
+      "uid": "regex_group"
+    },
+    {
+      "data_type": "blocks",
+      "display_name": "Regex Modular Blocks",
+      "blocks": [
+        {
+          "title": "MB 1",
+          "uid": "mb_1",
+          "schema": [
+            {
+              "data_type": "group",
+              "display_name": "Group",
+              "schema": [
+                {
+                  "data_type": "text",
+                  "display_name": "MB Group Regex",
+                  "uid": "mb_group_regex",
+                  "format": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?",
+                  "error_messages": {
+                    "format": ""
+                  }
+                }
+              ],
+              "uid": "group"
+            },
+            {
+              "data_type": "text",
+              "display_name": "MB Regex",
+              "uid": "mb_regex",
+              "format": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?",
+              "error_messages": {
+                "format": ""
+              }
+            }
+          ]
+        },
+        {
+          "title": "MB 2",
+          "uid": "mb_2"
+        }
+      ],
+      "uid": "regex_modular_blocks"
+    },
+    {
+      "data_type": "text",
+      "display_name": "Regex 6",
+      "uid": "regex_6",
+      "format": "\\/(((([^\\/\\s\\*]+\\*?)+\\/)|(\\*{1,2})\\/)+)?(((([^\\/\\s\\*]+\\*?)+)|(\\*{1,2}))+)?",
+      "error_messages": {
+        "format": ""
+      }
+    }
+  ]
+}
