@@ -6,17 +6,17 @@ import connectStack from '../../../utils/connect-stack'
 const regexMessages = require('../../../../messages/index.json').validateRegex
 
 export default class CmStacksValidateRegex extends Command {
-  static description = 'This command is used to check for Invalid Regex in all the Content Types & Global Fields'
+  static description = 'This command is used to check for all the invalid regexes present in the content types and global fields of your stack.'
 
   static flags = {
     help: flags.help({char: 'h'}),
-    alias: flags.string({char: 'a', description: 'Alias to the token for referring it with other commands.'}),
-    contentType: flags.boolean({char: 'c', description: 'Add to check Invalid Regex for Content Types'}),
-    globalField: flags.boolean({char: 'g', description: 'Add to check Invalid Regex for Global Fields'}),
-    filePath: flags.string({char: 'f', description: 'Mention the path where the Output File will be stored'}),
+    alias: flags.string({char: 'a', description: 'Alias to the token for referring it with other commands'}),
+    contentType: flags.boolean({char: 'c', description: 'To check invalid regexes within the content types'}),
+    globalField: flags.boolean({char: 'g', description: 'To check invalid regexes within the global fields'}),
+    filePath: flags.string({char: 'f', description: 'The path or the location in your file system where the CSV output file should be stored, e.g., -f "C:\\Users\\Name\\Desktop\\cli\\csv"'}),
   }
 
-  static usage = 'cm:stacks:validate-regex --alias=[ALIAS_NAME] --contentType --globalField --filePath=[FILE_PATH]'
+  static usage = '$ csdx cm:stacks:validate-regex --alias=[ALIAS_NAME] --contentType --globalField --filePath=[FILE_PATH]'
 
   static examples = [
     '$ csdx cm:stacks:validate-regex',

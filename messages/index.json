@@ -1,10 +1,10 @@
 {
     "validateRegex": {
-        "requireToken": "Enter Token Alias to be used",
+        "requireToken": "Enter Management Token Alias:",
         "required": "Required",
         "tokenDetails": "Token Details: ",
-        "selectSchema": "Select Schema to be Checked",
-        "selectOne": "Select atleast one Option",
+        "selectSchema": "Select the module you need to check.",
+        "selectOne": "Select atleast one option",
         "cliAction": {
             "connectStackStart": "Connecting Stack",
             "connectStackStop": "Stack Connection Established. Time taken: ",
@@ -12,19 +12,19 @@
             "processStackStop": "Stack Processing Completed. Time taken: "
         },
         "errors": {
-            "login": "Authorization failed, you're not logged in, login using csdx auth:login",
-            "tokenNotFound": "Management Token Alias not found, save using csdx auth:tokens:add",
+            "login": "Authorization failed, you're not logged in. Login using csdx auth:login",
+            "tokenNotFound": "Token not found, add token using csdx auth:tokens:add",
             "stack": {
-                "fetch": "Error in connecting to Stack",
-                "apiKey": "Invalid API Key"
+                "fetch": "Error in connecting to the stack",
+                "apiKey": "Invalid stack API Key"
             },
-            "contentTypes": "Error in Querying Content Types",
-            "globalFields": "Error in Querying Global Fields",
+            "contentTypes": "Error in querying content types.",
+            "globalFields": "Error in querying global fields.",
             "csvOutput": "Generate CSV Output failed"
         },
-        "tableOutput": "The following Table shows the details of Invalid Regex in your Stack",
-        "csvOutput": "Csv Output stored successfully at:",
-        "noInvalidRegex": "There are no Invalid Regex in your Stack",
-        "docsLink": "To know more, check out our Official Documentation: https://www.contentstack.com/docs/developers/create-content-types/validation-regex/#prevent-catastrophic-backtracking"
+        "tableOutput": "The following table shows the invalid regexes present in your stack.",
+        "csvOutput": "Csv output stored successfully at:",
+        "noInvalidRegex": "There are no invalid regexes in your stack.",
+        "docsLink": "To know more, visit our documentation site: https://www.contentstack.com/docs/developers/create-content-types/validation-regex/#prevent-catastrophic-backtracking"
     }
 }
