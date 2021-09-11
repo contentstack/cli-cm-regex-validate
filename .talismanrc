@@ -2,7 +2,7 @@ fileignoreconfig:
 - filename: messages/index.json
   checksum: 92a487ae670cb1937b9ebda35204fcecf73125a552c4b2c016ce7aedc8376f49
 - filename: package-lock.json
-  checksum: 5244d89a76df27e758b0d94c563e573558c66e2c8a50d550dd801078964f9627
+  checksum: e0238d0ed7be92e45c5b4f700230dd7b9887d945d24f3dcbaf062154df8856f3
 - filename: src/commands/cm/stacks/validate-regex.ts
   checksum: 60a38392c57ddfd834c0b8204a7b766d53e47681e11e7eb1936bf624a09ee70e
 - filename: src/utils/connect-stack.ts

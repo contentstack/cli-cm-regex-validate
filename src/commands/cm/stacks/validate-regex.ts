@@ -44,7 +44,7 @@ export default class CmStacksValidateRegex extends Command {
       })
     }
 
-    await inquireAlias(flags, regexMessages)
+    await inquireAlias(flags)
 
     let tokenDetails: any
     try {
@@ -55,7 +55,7 @@ export default class CmStacksValidateRegex extends Command {
       })
     }
 
-    await inquireModule(flags, regexMessages)
+    await inquireModule(flags)
 
     try {
       await connectStack(flags, authToken, tokenDetails.apiKey)

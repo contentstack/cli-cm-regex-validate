@@ -65,6 +65,7 @@
     "@contentstack/cli-command": "^0.1.1-beta.2",
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
+    "inquirer": "^6.5.2",
     "jest": "^27.1.1",
     "jsonexport": "^3.2.0",
     "safe-regex": "^1.1.0",
