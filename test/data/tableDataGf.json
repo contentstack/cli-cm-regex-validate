@@ -1,8 +1,1 @@
-[
-  {
-    "Module": "Global Field",
-    "Title": "Regex Fields",
-    "UID": "regex_fields",
-    "Invalid Regex Count": 5
-  }
-]
+[["Global Field", "Regex Fields", "regex_fields", 5]]

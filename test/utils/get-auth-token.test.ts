@@ -11,7 +11,6 @@ describe('Authorize User with Auth Token', () => {
     const authToken = 'blt1234'
     jest.spyOn(Configstore.prototype, 'get').mockImplementation(() => authToken)
     const tokenDetails = await getAuthToken()
-    console.log(tokenDetails)
     expect(tokenDetails).toStrictEqual(authToken)
   })
 
