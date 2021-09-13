@@ -46,13 +46,7 @@ const safeRegexCheck = (document: any, invalidRegex: any, tableData: any, type: 
     })
     const currentCount = invalidRegex.length - beforeCount
     if (currentCount > 0 && !nested) {
-      const tableDataObject = {
-        Module: type,
-        Title: document.title,
-        UID: document.uid,
-        'Invalid Regex Count': currentCount,
-      }
-      tableData.push(tableDataObject)
+      tableData.push([type, document.title, document.uid, currentCount])
     }
   }
   checkSchemaFieldRegex(document.schema, '', false)
