@@ -58,13 +58,14 @@
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "jest --detectOpenHandles --silent",
+    "test": "jest --detectOpenHandles",
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
     "@contentstack/cli-command": "^0.1.1-beta.2",
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
+    "cli-table3": "^0.6.0",
     "inquirer": "^6.5.2",
     "jest": "^27.1.1",
     "jsonexport": "^3.2.0",
