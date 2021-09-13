@@ -6,7 +6,7 @@ import connectStack from '../../../utils/connect-stack'
 const regexMessages = require('../../../../messages/index.json').validateRegex
 
 export default class CmStacksValidateRegex extends Command {
-  static description = 'This command is used to check for all the invalid regexes present in the content types and global fields of your stack.'
+  static description = 'This command is used to find all the invalid regexes present in the content types and global fields of your stack.'
 
   static flags = {
     help: flags.help({char: 'h'}),
