@@ -7,13 +7,14 @@ const regexMessages = require('../../messages/index.json').validateRegex
 export default async function generateOutput(flags: any, invalidRegex: any, tableData: any) {
   if (invalidRegex.length > 0) {
     const resultFile = 'results.csv'
-    let storagePath = path.resolve(__dirname, '../../', resultFile)
+    let storagePath = path.resolve(__dirname, '../../results/')
     if (flags.filePath) {
-      if (!fs.existsSync(flags.filePath)) {
-        fs.mkdirSync(flags.filePath, {recursive: true})
-      }
-      storagePath = flags.filePath + resultFile
+      storagePath = flags.filePath
     }
+    if (!fs.existsSync(storagePath)) {
+      fs.mkdirSync(storagePath, {recursive: true})
+    }
+    storagePath = path.resolve(storagePath, resultFile)
     jsonexport(invalidRegex, function (error: any, csv: any) {
       if (error) {
         throw new Error(regexMessages.errors.csvOutput)

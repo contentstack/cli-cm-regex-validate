@@ -14,7 +14,7 @@ describe('Generate Output after Stack is Processed', () => {
 
   test('Filepath Flag is not set & Invalid Regex is found', async () => {
     const resultFile = 'results.csv'
-    const storagePath = path.resolve(__dirname, '../../', resultFile)
+    const storagePath = path.resolve(__dirname, '../../results/', resultFile)
     const consoleSpy = jest.spyOn(console, 'log')
     await generateOutput({}, invalidJsonOutput, invalidTableOutput)
     expect(consoleSpy).toHaveBeenCalledTimes(4)
@@ -68,15 +68,14 @@ describe('Generate Output after Stack is Processed', () => {
 
   test('File is getting saved', async () => {
     const resultFile = 'results.csv'
-    const storagePath = path.resolve(__dirname, '../../', resultFile)
+    const storagePath = path.resolve(__dirname, '../../results', resultFile)
     const consoleSpy = jest.spyOn(console, 'log')
     await generateOutput({}, invalidJsonOutput, invalidTableOutput)
     expect(consoleSpy).toHaveBeenCalledTimes(4)
     expect(consoleSpy).toHaveBeenCalledWith(regexMessages.tableOutput)
     expect(consoleSpy).toHaveBeenCalledWith(regexMessages.csvOutput, storagePath)
     expect(consoleSpy).toHaveBeenCalledWith(regexMessages.docsLink)
-    const originalFs = jest.requireActual('fs')
-    expect(originalFs.existsSync(storagePath)).toBeTruthy()
+    expect(fs.writeFileSync).toBeCalled()
   })
 
   test('Invalid Regex is not found', async () => {
