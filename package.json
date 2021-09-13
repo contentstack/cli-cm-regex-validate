@@ -1,5 +1,5 @@
 {
-  "name": "cli-cm-regex-validate",
+  "name": "@contentstack/cli-cm-regex-validate",
   "description": "Validate Fields with Regex Property of Content Type and Global Field in a Stack",
   "version": "1.0.0",
   "author": "Contentstack",
@@ -42,7 +42,10 @@
   ],
   "homepage": "https://github.com/contentstack/cli-cm-regex-validate",
   "keywords": [
-    "oclif-plugin"
+    "contentstack",
+    "cli",
+    "plugin",
+    "regex"
   ],
   "license": "MIT",
   "oclif": {
