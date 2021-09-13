@@ -10,9 +10,9 @@ export default class CmStacksValidateRegex extends Command {
 
   static flags = {
     help: flags.help({char: 'h'}),
-    alias: flags.string({char: 'a', description: 'Alias to the token for referring it with other commands'}),
-    contentType: flags.boolean({char: 'c', description: 'To check invalid regexes within the content types'}),
-    globalField: flags.boolean({char: 'g', description: 'To check invalid regexes within the global fields'}),
+    alias: flags.string({char: 'a', description: 'Alias (name) assigned to the management token'}),
+    contentType: flags.boolean({char: 'c', description: 'To find invalid regexes within the content types'}),
+    globalField: flags.boolean({char: 'g', description: 'To find invalid regexes within the global fields'}),
     filePath: flags.string({char: 'f', description: 'The path or the location in your file system where the CSV output file should be stored, e.g., -f "C:\\Users\\Name\\Desktop\\cli\\csv"'}),
   }
 
