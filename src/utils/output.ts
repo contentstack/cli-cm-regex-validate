@@ -7,7 +7,7 @@ const regexMessages = require('../../messages/index.json').validateRegex
 export default async function generateOutput(flags: any, invalidRegex: any, tableData: any) {
   if (invalidRegex.length > 0) {
     const resultFile = 'results.csv'
-    let storagePath = path.resolve(__dirname, '../../results/')
+    let storagePath = path.resolve(__dirname, '../../results')
     if (flags.filePath) {
       storagePath = flags.filePath
     }
