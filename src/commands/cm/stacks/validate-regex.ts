@@ -16,16 +16,14 @@ export default class CmStacksValidateRegex extends Command {
     filePath: flags.string({char: 'f', description: regexMessages.command.filePath}),
   }
 
-  static usage = 'cm:stacks:validate-regex --alias=[ALIAS_NAME] --contentType --globalField --filePath=[FILE_PATH]'
-
   static examples = [
     '$ csdx cm:stacks:validate-regex',
-    '$ csdx cm:stacks:validate-regex --alias=\'Alias Name\' -a \'Alias Name\'',
-    '$ csdx cm:stacks:validate-regex --contentType -c',
-    '$ csdx cm:stacks:validate-regex --globalField -g',
-    '$ csdx cm:stacks:validate-regex --filePath=\'path/to/the/directory/\' -f \'path/to/the/directory\'',
-    '$ csdx cm:stacks:validate-regex -a \'Alias Name\' -c -g',
-    '$ csdx cm:stacks:validate-regex -a \'Alias Name\' -c -g -f \'path/to/the/directory\'',
+    '$ csdx cm:stacks:validate-regex -a <management_token_alias>',
+    '$ csdx cm:stacks:validate-regex -c',
+    '$ csdx cm:stacks:validate-regex -g',
+    '$ csdx cm:stacks:validate-regex -f <path/to/the/directory>',
+    '$ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g',
+    '$ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>',
   ]
 
   async run() {
