@@ -21,7 +21,7 @@ export default async function generateOutput(flags: any, invalidRegex: any, tabl
       }
       fs.writeFileSync(storagePath, csv)
     })
-    console.log(regexMessages.tableOutput)
+    console.log(regexMessages.output.tableOutput)
     const table = new Table({
       head: ['Module', 'Title', 'UID', 'Invalid Regex Count'],
     })
@@ -29,9 +29,9 @@ export default async function generateOutput(flags: any, invalidRegex: any, tabl
       table.push(row)
     })
     console.log(table.toString())
-    console.log(regexMessages.csvOutput, storagePath)
-    console.log(regexMessages.docsLink)
+    console.log(regexMessages.output.csvOutput, storagePath)
+    console.log(regexMessages.output.docsLink)
   } else {
-    console.log(regexMessages.noInvalidRegex)
+    console.log(regexMessages.output.noInvalidRegex)
   }
 }

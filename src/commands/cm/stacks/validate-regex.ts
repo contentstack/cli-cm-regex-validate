@@ -34,7 +34,7 @@ export default class CmStacksValidateRegex extends Command {
       authToken = await getAuthToken()
     } catch (error) {
       this.error(regexMessages.errors.login, {
-        ref: 'https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/#login',
+        ref: regexMessages.command.login,
       })
     }
 
@@ -45,7 +45,7 @@ export default class CmStacksValidateRegex extends Command {
       tokenDetails = await getManagementToken(flags.alias)
     } catch (error) {
       this.error(regexMessages.errors.tokenNotFound, {
-        ref: 'https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/#add-management-token',
+        ref: regexMessages.command.addManagementToken,
       })
     }
 

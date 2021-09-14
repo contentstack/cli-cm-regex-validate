@@ -76,7 +76,7 @@ describe('Process Stack', () => {
       expect(cli.action.stop).toHaveBeenCalled()
       expect(generateOutput).not.toHaveBeenCalled()
     } catch (error) {
-      expect(error.message).toBe(regexMessages.errors.contentTypes)
+      expect(error.message).toBe(regexMessages.errors.stack.contentTypes)
     }
   })
 
@@ -105,7 +105,7 @@ describe('Process Stack', () => {
       expect(cli.action.stop).toHaveBeenCalled()
       expect(generateOutput).not.toHaveBeenCalled()
     } catch (error) {
-      expect(error.message).toBe(regexMessages.errors.globalFields)
+      expect(error.message).toBe(regexMessages.errors.stack.globalFields)
     }
   })
 })

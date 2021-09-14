@@ -18,9 +18,9 @@ describe('Generate Output after Stack is Processed', () => {
     const consoleSpy = jest.spyOn(console, 'log')
     await generateOutput({}, invalidJsonOutput, invalidTableOutput)
     expect(consoleSpy).toHaveBeenCalledTimes(4)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.tableOutput)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.csvOutput, storagePath)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.docsLink)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.tableOutput)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.csvOutput, storagePath)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.docsLink)
   })
 
   test('Filepath Flag is set, Path already exists & Invalid Regex is found', async () => {
@@ -39,9 +39,9 @@ describe('Generate Output after Stack is Processed', () => {
     expect(fs.existsSync).toBeCalled()
     expect(fs.writeFileSync).toBeCalled()
     expect(consoleSpy).toHaveBeenCalledTimes(4)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.tableOutput)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.csvOutput, storagePath)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.docsLink)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.tableOutput)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.csvOutput, storagePath)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.docsLink)
   })
 
   test('Filepath Flag is set, Path does not exists & Invalid Regex is found', async () => {
@@ -61,9 +61,9 @@ describe('Generate Output after Stack is Processed', () => {
     expect(fs.mkdirSync).toBeCalled()
     expect(fs.writeFileSync).toBeCalled()
     expect(consoleSpy).toHaveBeenCalledTimes(4)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.tableOutput)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.csvOutput, storagePath)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.docsLink)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.tableOutput)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.csvOutput, storagePath)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.docsLink)
   })
 
   test('File is getting saved', async () => {
@@ -72,9 +72,9 @@ describe('Generate Output after Stack is Processed', () => {
     const consoleSpy = jest.spyOn(console, 'log')
     await generateOutput({}, invalidJsonOutput, invalidTableOutput)
     expect(consoleSpy).toHaveBeenCalledTimes(4)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.tableOutput)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.csvOutput, storagePath)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.docsLink)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.tableOutput)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.csvOutput, storagePath)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.docsLink)
     expect(fs.writeFileSync).toBeCalled()
   })
 
@@ -82,6 +82,6 @@ describe('Generate Output after Stack is Processed', () => {
     const consoleSpy = jest.spyOn(console, 'log')
     await generateOutput({}, [], [])
     expect(consoleSpy).toHaveBeenCalledTimes(1)
-    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.noInvalidRegex)
+    expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.noInvalidRegex)
   })
 })

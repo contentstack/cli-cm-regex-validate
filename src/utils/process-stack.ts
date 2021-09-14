@@ -17,7 +17,7 @@ export default async function processStack(flags: any, stack: any, startTime: nu
         safeRegexCheck(contentType, invalidRegex, tableData, 'Content Type')
       })
     }).catch(() => {
-      throw new Error(regexMessages.errors.contentTypes)
+      throw new Error(regexMessages.errors.stack.contentTypes)
     })
   }
   if (flags.globalField) {
@@ -27,7 +27,7 @@ export default async function processStack(flags: any, stack: any, startTime: nu
         safeRegexCheck(globalField, invalidRegex, tableData, 'Global Field')
       })
     }).catch(() => {
-      throw new Error(regexMessages.errors.globalFields)
+      throw new Error(regexMessages.errors.stack.globalFields)
     })
   }
   cli.action.stop(regexMessages.cliAction.processStackStop + (Date.now() - processTime) + ' ms')
