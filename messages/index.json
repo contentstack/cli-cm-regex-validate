@@ -1,5 +1,13 @@
 {
     "validateRegex": {
+        "command":{
+            "description": "This command is used to find all the invalid regexes present in the content types and global fields of your stack.",
+            "alias": "Alias (name) assigned to the management token",
+            "contentTypes": "To find invalid regexes within the content types",
+            "globalFields": "To find invalid regexes within the global fields",
+            "filePath": "The path or the location in your file system where the CSV output file should be stored, e.g., -f 'C:\\Users\\Name\\Desktop\\cli\\csv'",
+            "help": "To show details for the CLI command"
+        },
         "requireToken": "Enter management token alias:",
         "required": "Required.",
         "tokenDetails": "Token details: ",

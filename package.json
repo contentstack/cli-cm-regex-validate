@@ -3,9 +3,6 @@
   "description": "Validate Fields with Regex Property of Content Type and Global Field in a Stack",
   "version": "1.0.0",
   "author": "Contentstack",
-  "bin": {
-    "csdx-regex": "./bin/run"
-  },
   "bugs": "https://github.com/contentstack/cli-cm-regex-validate/issues",
   "devDependencies": {
     "@oclif/dev-cli": "^1.26.0",
@@ -50,7 +47,7 @@
   "license": "MIT",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "oclif-example",
+    "bin": "csdx",
     "devPlugins": [
       "@oclif/plugin-help"
     ]
