@@ -53,7 +53,7 @@ export default class CmStacksValidateRegex extends Command {
 
     try {
       await connectStack(flags, authToken, tokenDetails.apiKey)
-    } catch (error: any) {
+    } catch (error) {
       this.error(regexMessages.errors.stack.fetch)
     }
   }
