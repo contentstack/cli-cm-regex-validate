@@ -5,7 +5,7 @@
             "alias": "Alias (name) assigned to the management token",
             "contentTypes": "To find invalid regexes within the content types",
             "globalFields": "To find invalid regexes within the global fields",
-            "filePath": "The path or the location in your file system where the CSV output file should be stored, e.g., -f 'C:\\Users\\Name\\Desktop\\cli\\csv'",
+            "filePath": "[optional] The path or the location in your file system where the CSV output file should be stored.",
             "help": "To show details for the CLI command"
         },
         "requireToken": "Enter management token alias:",
