@@ -1,4 +1,4 @@
-import {Command, flags} from '@oclif/command'
+import {Command, flags} from '@contentstack/cli-command'
 import getAuthToken from '../../../utils/get-auth-token'
 import {inquireAlias, inquireModule} from '../../../utils/interactive'
 import getManagementToken from '../../../utils/get-management-token'
