@@ -9,7 +9,7 @@ export default class CmStacksValidateRegex extends Command {
   static description = 'This command is used to find all the invalid regexes present in the content types and global fields of your stack.'
 
   static flags = {
-    help: flags.help({char: 'h'}),
+    help: flags.help({char: 'h', description: 'To show details for the CLI command'}),
     alias: flags.string({char: 'a', description: 'Alias (name) assigned to the management token'}),
     contentType: flags.boolean({char: 'c', description: 'To find invalid regexes within the content types'}),
     globalField: flags.boolean({char: 'g', description: 'To find invalid regexes within the global fields'}),

@@ -1,21 +1,21 @@
 {
     "validateRegex": {
-        "requireToken": "Enter Management Token Alias:",
+        "requireToken": "Enter management token alias:",
         "required": "Required.",
-        "tokenDetails": "Token Details: ",
+        "tokenDetails": "Token details: ",
         "selectSchema": "Select the module you need to check.",
         "selectOne": "Select at least one option.",
         "cliAction": {
-            "connectStackStart": "Connecting Stack",
-            "connectStackStop": "Stack Connection Established. Time taken: ",
-            "processStackStart": "Processing Stack",
-            "processStackStop": "Stack Processing Completed. Time taken: "
+            "connectStackStart": "Connecting stack",
+            "connectStackStop": "Stack connection established. Time taken: ",
+            "processStackStart": "Processing stack",
+            "processStackStop": "Stack processing completed. Time taken: "
         },
         "errors": {
             "login": "Could not log in as authorization failed. Log in using csdx auth:login",
             "tokenNotFound": "Token not found. Add a token using csdx auth:tokens:add",
             "stack": {
-                "fetch": "Error in connecting to the stack.",
+                "fetch": "Error in connecting to the stack. Please try again.",
                 "apiKey": "Invalid stack API Key provided."
             },
             "contentTypes": "Error in querying content types.",
