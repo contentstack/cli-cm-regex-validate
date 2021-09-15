@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "@contentstack/cli-command": "^0.1.1-beta.2",
+    "@contentstack/management": "^1.2.4",
     "@oclif/command": "^1.8.0",
     "@oclif/config": "^1.17.0",
     "cli-table3": "^0.6.0",
