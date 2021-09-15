@@ -19,7 +19,7 @@ $ npm install -g @contentstack/cli-cm-regex-validate
 $ csdx COMMAND
 running command...
 $ csdx (-v|--version|version)
-@contentstack/cli-cm-regex-validate/1.0.0 linux-x64 node-v16.2.0
+@contentstack/cli-cm-regex-validate/1.0.0 linux-x64 node-v10.19.0
 $ csdx --help [COMMAND]
 USAGE
   $ csdx COMMAND
@@ -47,7 +47,7 @@ OPTIONS
 
   -g, --globalField        To find invalid regexes within the global fields
 
-  -h, --help               To show details for the CLI command
+  -h, --help               To show the flags that can be used with this CLI command
 
 EXAMPLES
   $ csdx cm:stacks:validate-regex
