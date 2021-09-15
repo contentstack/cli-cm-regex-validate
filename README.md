@@ -15,33 +15,48 @@ Validate Fields with Regex Property of Content Type and Global Field in a Stack
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g cli-cm-regex-validate
-$ oclif-example COMMAND
+$ npm install -g @contentstack/cli-cm-regex-validate
+$ csdx COMMAND
 running command...
-$ oclif-example (-v|--version|version)
-cli-cm-regex-validate/1.0.0 linux-x64 node-v16.2.0
-$ oclif-example --help [COMMAND]
+$ csdx (-v|--version|version)
+@contentstack/cli-cm-regex-validate/1.0.0 linux-x64 node-v16.2.0
+$ csdx --help [COMMAND]
 USAGE
-  $ oclif-example COMMAND
+  $ csdx COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`oclif-example cm:stacks:validate-regex [FILE]`](#oclif-example-cmstacksvalidate-regex-file)
+* [`csdx cm:stacks:validate-regex`](#csdx-cmstacksvalidate-regex)
 
-## `oclif-example cm:stacks:validate-regex [FILE]`
+## `csdx cm:stacks:validate-regex`
 
-describe the command here
+This command is used to find all the invalid regexes present in the content types and global fields of your stack.
 
 ```
 USAGE
-  $ oclif-example cm:stacks:validate-regex [FILE]
+  $ csdx cm:stacks:validate-regex
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -a, --alias=alias        Alias (name) assigned to the management token
+  -c, --contentType        To find invalid regexes within the content types
+
+  -f, --filePath=filePath  [optional] The path or the location in your file system where the CSV output file should be
+                           stored.
+
+  -g, --globalField        To find invalid regexes within the global fields
+
+  -h, --help               To show details for the CLI command
+
+EXAMPLES
+  $ csdx cm:stacks:validate-regex
+  $ csdx cm:stacks:validate-regex -a <management_token_alias>
+  $ csdx cm:stacks:validate-regex -c
+  $ csdx cm:stacks:validate-regex -g
+  $ csdx cm:stacks:validate-regex -f <path/to/the/directory>
+  $ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g
+  $ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>
 ```
 
 _See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.0.0/src/commands/cm/stacks/validate-regex.ts)_

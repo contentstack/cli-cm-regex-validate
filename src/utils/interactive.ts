@@ -3,7 +3,7 @@ const regexMessages = require('../../messages/index.json').validateRegex
 
 export const validateAlias = async function (alias: any) {
   if (!alias || alias.trim() === '') {
-    return regexMessages.required
+    return regexMessages.interactive.required
   }
   return true
 }
@@ -13,7 +13,7 @@ export async function inquireAlias(flags: any) {
     const input = [{
       type: 'input',
       name: 'alias',
-      message: regexMessages.requireToken,
+      message: regexMessages.interactive.requireToken,
       validate: validateAlias,
     }]
     const response = await inquirer.prompt(input)
@@ -24,7 +24,7 @@ export async function inquireAlias(flags: any) {
 
 export const validateModule = async function (choice: any) {
   if (choice.length === 0) {
-    return regexMessages.selectOne
+    return regexMessages.interactive.selectOne
   }
   return true
 }
@@ -34,7 +34,7 @@ export async function inquireModule(flags: any) {
     const choices = [{
       type: 'checkbox',
       name: 'choice',
-      message: regexMessages.selectSchema,
+      message: regexMessages.interactive.selectSchema,
       choices: [
         {name: 'Content Type', value: 'contentType', checked: true},
         {name: 'Global Field', value: 'globalField'},

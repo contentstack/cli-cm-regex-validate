@@ -16,7 +16,7 @@ describe('Interactive', () => {
   test('Alias Token is not Entered', async () => {
     const alias = ''
     const response = await validateAlias(alias)
-    expect(response).toBe(regexMessages.required)
+    expect(response).toBe(regexMessages.interactive.required)
   })
 
   test('Alias Token is Entered', async () => {
@@ -43,7 +43,7 @@ describe('Interactive', () => {
   test('Module is not Selected', async () => {
     const choice: string[] = []
     const response = await validateModule(choice)
-    expect(response).toBe(regexMessages.selectOne)
+    expect(response).toBe(regexMessages.interactive.selectOne)
   })
 
   test('Content Type Module is Selected', async () => {
