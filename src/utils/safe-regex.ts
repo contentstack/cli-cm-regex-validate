@@ -1,11 +1,11 @@
 const safe = require('safe-regex')
 
-const safeRegexCheck = (document: any, invalidRegex: any, tableData: any, type: string) => {
+const safeRegex = (document: any, invalidRegex: any, tableData: any, type: string) => {
   const beforeCount = invalidRegex.length
   function checkSchemaFieldRegex(schema: any, currentPath: string, nested: boolean) {
     let newPath = ''
-    function path(currentPath: string, uid: string) {
-      return currentPath.trim() === '' ? uid : [currentPath, uid].join('.')
+    function path(currentFieldPath: string, uid: string) {
+      return currentFieldPath.trim() === '' ? uid : [currentFieldPath, uid].join('.')
     }
     schema.forEach((field: any) => {
       newPath = path(currentPath, field.uid)
@@ -52,4 +52,4 @@ const safeRegexCheck = (document: any, invalidRegex: any, tableData: any, type: 
   checkSchemaFieldRegex(document.schema, '', false)
 }
 
-export default safeRegexCheck
+export default safeRegex

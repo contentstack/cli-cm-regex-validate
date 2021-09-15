@@ -1,6 +1,6 @@
 import {cli} from 'cli-ux'
-import safeRegexCheck from './safe-regex'
-import generateOutput from './output'
+import safeRegex from './safe-regex'
+import generateOutput from './generate-output'
 const regexMessages = require('../../messages/index.json').validateRegex
 
 export default async function processStack(flags: any, stack: any, startTime: number) {
@@ -12,9 +12,9 @@ export default async function processStack(flags: any, stack: any, startTime: nu
   const tableData: object[] = []
   if (flags.contentType) {
     const contentTypes = stack.contentType().query(query).find()
-    await contentTypes.then((contentTypes: any) => {
-      contentTypes.items.forEach((contentType: any) => {
-        safeRegexCheck(contentType, invalidRegex, tableData, 'Content Type')
+    await contentTypes.then((contentTypesObject: any) => {
+      contentTypesObject.items.forEach((contentType: any) => {
+        safeRegex(contentType, invalidRegex, tableData, 'Content Type')
       })
     }).catch(() => {
       throw new Error(regexMessages.errors.stack.contentTypes)
@@ -22,9 +22,9 @@ export default async function processStack(flags: any, stack: any, startTime: nu
   }
   if (flags.globalField) {
     const globalFields = stack.globalField().query(query).find()
-    await globalFields.then((globalFields: any) => {
-      globalFields.items.forEach((globalField: any) => {
-        safeRegexCheck(globalField, invalidRegex, tableData, 'Global Field')
+    await globalFields.then((globalFieldsObject: any) => {
+      globalFieldsObject.items.forEach((globalField: any) => {
+        safeRegex(globalField, invalidRegex, tableData, 'Global Field')
       })
     }).catch(() => {
       throw new Error(regexMessages.errors.stack.globalFields)
