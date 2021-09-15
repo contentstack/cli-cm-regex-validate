@@ -6,7 +6,7 @@
             "contentTypes": "To find invalid regexes within the content types",
             "globalFields": "To find invalid regexes within the global fields",
             "filePath": "[optional] The path or the location in your file system where the CSV output file should be stored.",
-            "help": "To show details for the CLI command",
+            "help": "To show the flags that can be used with this CLI command",
             "login": "https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/#login",
             "addManagementToken": "https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/#add-management-token"
         },
