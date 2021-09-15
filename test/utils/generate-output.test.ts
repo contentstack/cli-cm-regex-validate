@@ -1,6 +1,6 @@
 import * as path from 'path'
 import * as fs from 'fs'
-import generateOutput from '../../src/utils/output'
+import generateOutput from '../../src/utils/generate-output'
 const invalidJsonOutput = require('../data/invalidRegex.json')
 const invalidTableOutput = require('../data/tableData.json')
 const regexMessages = require('../../messages/index.json').validateRegex

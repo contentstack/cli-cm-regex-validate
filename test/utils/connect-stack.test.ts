@@ -5,7 +5,7 @@ import processStack from '../../src/utils/process-stack'
 const regexMessages = require('../../messages/index.json').validateRegex
 
 jest.mock('@contentstack/management', () => ({client: jest.fn()}))
-jest.mock('../../src/utils/output.ts')
+jest.mock('../../src/utils/generate-output.ts')
 jest.mock('../../src/utils/process-stack.ts')
 
 /* @ts-ignore */

@@ -1,4 +1,4 @@
-import safeRegexCheck from '../../src/utils/safe-regex'
+import safeRegex from '../../src/utils/safe-regex'
 const validDocument = require('../data/validDocument.json')
 const invalidDocument = require('../data/invalidDocument.json')
 const invalidJsonOutput = require('../data/invalidRegex.json')
@@ -16,7 +16,7 @@ describe('Safe Regex Check in Schema', () => {
       const invalidRegex: object[] = []
       const tableData: object[] = []
       const moduleType = 'Content Type'
-      safeRegexCheck(validDocument, invalidRegex, tableData, moduleType)
+      safeRegex(validDocument, invalidRegex, tableData, moduleType)
       expect(invalidRegex).toStrictEqual([])
       expect(tableData).toStrictEqual([])
     })
@@ -25,7 +25,7 @@ describe('Safe Regex Check in Schema', () => {
       const invalidRegex: object[] = []
       const tableData: object[] = []
       const moduleType = 'Content Type'
-      safeRegexCheck(invalidDocument, invalidRegex, tableData, moduleType)
+      safeRegex(invalidDocument, invalidRegex, tableData, moduleType)
       expect(invalidRegex).toStrictEqual(invalidJsonOutput)
       expect(tableData).toStrictEqual(invalidTableOutput)
     })
@@ -36,7 +36,7 @@ describe('Safe Regex Check in Schema', () => {
       const invalidRegex: object[] = []
       const tableData: object[] = []
       const moduleType = 'Global Field'
-      safeRegexCheck(validDocument, invalidRegex, tableData, moduleType)
+      safeRegex(validDocument, invalidRegex, tableData, moduleType)
       expect(invalidRegex).toStrictEqual([])
       expect(tableData).toStrictEqual([])
     })
@@ -45,7 +45,7 @@ describe('Safe Regex Check in Schema', () => {
       const invalidRegex: object[] = []
       const tableData: object[] = []
       const moduleType = 'Global Field'
-      safeRegexCheck(invalidDocument, invalidRegex, tableData, moduleType)
+      safeRegex(invalidDocument, invalidRegex, tableData, moduleType)
       expect(invalidRegex).toStrictEqual(invalidJsonOutputGf)
       expect(tableData).toStrictEqual(invalidTableOutputGf)
     })

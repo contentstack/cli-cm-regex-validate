@@ -1,10 +1,10 @@
 import {cli} from 'cli-ux'
 import processStack from '../../src/utils/process-stack'
-import generateOutput from '../../src/utils/output'
+import generateOutput from '../../src/utils/generate-output'
 const validDocument = require('../data/validDocument.json')
 const regexMessages = require('../../messages/index.json').validateRegex
 
-jest.mock('../../src/utils/output.ts')
+jest.mock('../../src/utils/generate-output.ts')
 
 /* @ts-ignore */
 cli = ({

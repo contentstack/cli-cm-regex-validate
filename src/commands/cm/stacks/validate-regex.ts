@@ -4,7 +4,7 @@ import {inquireAlias, inquireModule} from '../../../utils/interactive'
 import connectStack from '../../../utils/connect-stack'
 const regexMessages = require('../../../../messages/index.json').validateRegex
 
-export default class CmStacksValidateRegex extends Command {
+export default class ValidateRegex extends Command {
   static description = regexMessages.command.description
 
   static flags = {
@@ -26,7 +26,7 @@ export default class CmStacksValidateRegex extends Command {
   ]
 
   async run() {
-    const {flags} = this.parse(CmStacksValidateRegex)
+    const commandObject = this.parse(ValidateRegex)
 
     let authToken
     try {
@@ -37,21 +37,21 @@ export default class CmStacksValidateRegex extends Command {
       })
     }
 
-    await inquireAlias(flags)
+    await inquireAlias(commandObject.flags)
 
     let tokenDetails: any
     try {
-      tokenDetails = await this.getToken(flags.alias)
+      tokenDetails = await this.getToken(commandObject.flags.alias)
     } catch (error) {
       this.error(regexMessages.errors.tokenNotFound, {
         ref: regexMessages.command.addManagementToken,
       })
     }
 
-    await inquireModule(flags)
+    await inquireModule(commandObject.flags)
 
     try {
-      await connectStack(flags, authToken, tokenDetails.apiKey)
+      await connectStack(commandObject.flags, authToken, tokenDetails.apiKey)
     } catch (error) {
       this.error(regexMessages.errors.stack.fetch)
     }
