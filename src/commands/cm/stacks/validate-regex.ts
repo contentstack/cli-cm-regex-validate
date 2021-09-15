@@ -1,7 +1,6 @@
 import {Command, flags} from '@contentstack/cli-command'
 import getAuthToken from '../../../utils/get-auth-token'
 import {inquireAlias, inquireModule} from '../../../utils/interactive'
-import getManagementToken from '../../../utils/get-management-token'
 import connectStack from '../../../utils/connect-stack'
 const regexMessages = require('../../../../messages/index.json').validateRegex
 
@@ -42,7 +41,7 @@ export default class CmStacksValidateRegex extends Command {
 
     let tokenDetails: any
     try {
-      tokenDetails = await getManagementToken(flags.alias)
+      tokenDetails = await this.getToken(flags.alias)
     } catch (error) {
       this.error(regexMessages.errors.tokenNotFound, {
         ref: regexMessages.command.addManagementToken,
