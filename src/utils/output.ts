@@ -7,20 +7,21 @@ const regexMessages = require('../../messages/index.json').validateRegex
 export default async function generateOutput(flags: any, invalidRegex: any, tableData: any) {
   if (invalidRegex.length > 0) {
     const resultFile = 'results.csv'
-    let storagePath = path.resolve(__dirname, '../../', resultFile)
+    let storagePath = path.resolve(__dirname, '../../results')
     if (flags.filePath) {
-      if (!fs.existsSync(flags.filePath)) {
-        fs.mkdirSync(flags.filePath, {recursive: true})
-      }
-      storagePath = flags.filePath + resultFile
+      storagePath = flags.filePath
     }
+    if (!fs.existsSync(storagePath)) {
+      fs.mkdirSync(storagePath, {recursive: true})
+    }
+    storagePath = path.resolve(storagePath, resultFile)
     jsonexport(invalidRegex, function (error: any, csv: any) {
       if (error) {
         throw new Error(regexMessages.errors.csvOutput)
       }
       fs.writeFileSync(storagePath, csv)
     })
-    console.log(regexMessages.tableOutput)
+    console.log(regexMessages.output.tableOutput)
     const table = new Table({
       head: ['Module', 'Title', 'UID', 'Invalid Regex Count'],
     })
@@ -28,9 +29,9 @@ export default async function generateOutput(flags: any, invalidRegex: any, tabl
       table.push(row)
     })
     console.log(table.toString())
-    console.log(regexMessages.csvOutput, storagePath)
-    console.log(regexMessages.docsLink)
+    console.log(regexMessages.output.csvOutput, storagePath)
+    console.log(regexMessages.output.docsLink)
   } else {
-    console.log(regexMessages.noInvalidRegex)
+    console.log(regexMessages.output.noInvalidRegex)
   }
 }
