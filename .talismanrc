@@ -6,8 +6,8 @@ fileignoreconfig:
 - filename: src/commands/cm/stacks/validate-regex.ts
   checksum: 60a38392c57ddfd834c0b8204a7b766d53e47681e11e7eb1936bf624a09ee70e
 - filename: src/utils/connect-stack.ts
-  checksum: 4531b14cadad275114fa73df74ad55202157a3cd4a984d9170b7bc52abc0a87c
+  checksum: 93a3bfe4672280d58668be94baeeb3c254cf2850e9c51af79951fcf3cad916cb
 - filename: test/utils/connect-stack.test.ts
-  checksum: f5b2cea668977cc0ffd5c278207e729e7f1493e70a77a3e273942939cfd4509a
+  checksum: 42b14b635cef68608fb7835e91a4123731accf660c7e6a897672f28a277e27ea
 - filename: test/utils/get-management-token.test.ts
   checksum: 27bf7650b7264db640f23aa75ce21c4ecfa4f32ddc5caed48952dc12e9c59f41

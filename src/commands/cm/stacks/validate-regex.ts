@@ -1,5 +1,4 @@
 import {Command, flags} from '@contentstack/cli-command'
-import getAuthToken from '../../../utils/get-auth-token'
 import {inquireAlias, inquireModule} from '../../../utils/interactive'
 import connectStack from '../../../utils/connect-stack'
 const regexMessages = require('../../../../messages/index.json').validateRegex
@@ -28,15 +27,6 @@ export default class ValidateRegex extends Command {
   async run() {
     const commandObject = this.parse(ValidateRegex)
 
-    let authToken
-    try {
-      authToken = await getAuthToken()
-    } catch (error) {
-      this.error(regexMessages.errors.login, {
-        ref: regexMessages.command.login,
-      })
-    }
-
     await inquireAlias(commandObject.flags)
 
     let tokenDetails: any
@@ -51,7 +41,7 @@ export default class ValidateRegex extends Command {
     await inquireModule(commandObject.flags)
 
     try {
-      await connectStack(commandObject.flags, this.cmaHost, authToken, tokenDetails.apiKey)
+      await connectStack(commandObject.flags, this.cmaHost, tokenDetails)
     } catch (error) {
       this.error(regexMessages.errors.stack.fetch)
     }
