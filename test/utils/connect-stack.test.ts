@@ -23,6 +23,7 @@ describe('Get Client from Management SDK, connect with Stack & process Stack', (
   })
 
   test('API Key is Valid', async () => {
+    const host = 'api-contentstack.io'
     const apiKey = 'blt1234'
     const authToken = 'blt1234'
     const flags = {
@@ -38,13 +39,14 @@ describe('Get Client from Management SDK, connect with Stack & process Stack', (
         }),
       }
     })
-    await connectStack(flags, authToken, apiKey)
+    await connectStack(flags, host, authToken, apiKey)
     expect(cli.action.start).toHaveBeenCalled()
     expect(processStack).toHaveBeenCalled()
   })
 
   test('API Key is Invalid', async () => {
     try {
+      const host = 'api-contentstack.io'
       const apiKey = 'blt1234'
       const authToken = 'blt1234'
       const flags = {
@@ -60,7 +62,7 @@ describe('Get Client from Management SDK, connect with Stack & process Stack', (
           }),
         }
       })
-      await connectStack(flags, authToken, apiKey)
+      await connectStack(flags, host, authToken, apiKey)
       expect(cli.action.start).toHaveBeenCalled()
     } catch (error) {
       expect(error.message).toBe(regexMessages.errors.stack.apiKey)
