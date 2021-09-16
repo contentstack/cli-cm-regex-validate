@@ -51,7 +51,7 @@ export default class ValidateRegex extends Command {
     await inquireModule(commandObject.flags)
 
     try {
-      await connectStack(commandObject.flags, authToken, tokenDetails.apiKey)
+      await connectStack(commandObject.flags, this.cmaHost, authToken, tokenDetails.apiKey)
     } catch (error) {
       this.error(regexMessages.errors.stack.fetch)
     }
