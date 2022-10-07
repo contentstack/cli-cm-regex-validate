@@ -1,5 +1,4 @@
 import { Command, flags } from "@contentstack/cli-command";
-const { configHandler } = require("@contentstack/cli-utilities");
 import { inquireAlias, inquireModule } from "../../../utils/interactive";
 import connectStack from "../../../utils/connect-stack";
 const regexMessages = require("../../../../messages/index.json").validateRegex;
@@ -36,19 +35,6 @@ export default class ValidateRegex extends Command {
     "$ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g",
     "$ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>",
   ];
-
-  async getToken(managementTokenAlias: string) {
-    const listOfTokens = configHandler.get("tokens");
-    if (managementTokenAlias && listOfTokens[managementTokenAlias]) {
-      return {
-        name: managementTokenAlias,
-        apiKey: listOfTokens[managementTokenAlias].apiKey,
-        token: listOfTokens[managementTokenAlias].token,
-      };
-    } else {
-      throw new Error("Invalid management token alias");
-    }
-  }
 
   async run() {
     const commandObject = this.parse(ValidateRegex);
