@@ -1,43 +1,43 @@
 {
-    "validateRegex": {
-        "command":{
-            "description": "This command is used to find all the invalid regexes present in the content types and global fields of your stack.",
-            "alias": "Alias (name) assigned to the management token",
-            "contentTypes": "To find invalid regexes within the content types",
-            "globalFields": "To find invalid regexes within the global fields",
-            "filePath": "[optional] The path or the location in your file system where the CSV output file should be stored.",
-            "help": "To show the flags that can be used with this CLI command",
-            "login": "https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/#login",
-            "addManagementToken": "https://www.contentstack.com/docs/developers/cli/authenticate-with-the-cli/#add-management-token"
-        },
-        "interactive": {
-            "requireToken": "Enter management token alias:",
-            "required": "Required.",
-            "selectSchema": "Select the module you need to check.",
-            "selectOne": "Select at least one option."
-        },
-        "cliAction": {
-            "connectStackStart": "Connecting stack",
-            "connectStackStop": "Stack connection established. Time taken: ",
-            "processStackStart": "Processing stack",
-            "processStackStop": "Stack processing completed. Time taken: "
-        },
-        "errors": {
-            "login": "Could not log in as authorization failed. Log in using csdx auth:login",
-            "tokenNotFound": "Token not found. Add a token using csdx auth:tokens:add",
-            "stack": {
-                "fetch": "Error in connecting to the stack. Please try again.",
-                "apiKey": "Invalid stack API Key provided.",
-                "contentTypes": "Error in querying content types.",
-                "globalFields": "Error in querying global fields."
-            },
-            "csvOutput": "Failed to generate CSV output."
-        },
-        "output":{
-            "tableOutput": "The following table shows the invalid regexes present in your stack.",
-            "csvOutput": "CSV output stored successfully at:",
-            "noInvalidRegex": "There are no invalid regexes in your stack.",
-            "docsLink": "To know more, visit our documentation site on catastrophic-backtracking: https://www.contentstack.com/docs/developers/create-content-types/validation-regex/#prevent-catastrophic-backtracking"
-        }
+  "validateRegex": {
+    "command": {
+      "description": "This command is used to find all the invalid regexes present in the content types and global fields of your stack.",
+      "alias": "Alias (name) assigned to the management token",
+      "contentTypes": "To find invalid regexes within the content types",
+      "globalFields": "To find invalid regexes within the global fields",
+      "filePath": "[optional] The path or the location in your file system where the CSV output file should be stored.",
+      "help": "To show the flags that can be used with this CLI command",
+      "login": "https://www.contentstack.com/docs/developers/cli/cli-authentication/#login",
+      "addManagementToken": "https://www.contentstack.com/docs/developers/cli/cli-authentication/#add-management-token"
+    },
+    "interactive": {
+      "requireToken": "Enter management token alias:",
+      "required": "Required.",
+      "selectSchema": "Select the module you need to check.",
+      "selectOne": "Select at least one option."
+    },
+    "cliAction": {
+      "connectStackStart": "Connecting stack",
+      "connectStackStop": "Stack connection established. Time taken: ",
+      "processStackStart": "Processing stack",
+      "processStackStop": "Stack processing completed. Time taken: "
+    },
+    "errors": {
+      "login": "Could not log in as authorization failed. Log in using csdx auth:login",
+      "tokenNotFound": "Token not found. Add a token using csdx auth:tokens:add",
+      "stack": {
+        "fetch": "Error in connecting to the stack. Please try again.",
+        "apiKey": "Invalid stack API Key provided.",
+        "contentTypes": "Error in querying content types.",
+        "globalFields": "Error in querying global fields."
+      },
+      "csvOutput": "Failed to generate CSV output."
+    },
+    "output": {
+      "tableOutput": "The following table shows the invalid regexes present in your stack.",
+      "csvOutput": "CSV output stored successfully at:",
+      "noInvalidRegex": "There are no invalid regexes in your stack.",
+      "docsLink": "To know more, visit our documentation site on catastrophic-backtracking: https://www.contentstack.com/docs/developers/create-content-types/validation-regex/#prevent-catastrophic-backtracking"
     }
+  }
 }
