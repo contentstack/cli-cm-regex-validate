@@ -1,6 +1,6 @@
 fileignoreconfig:
   - filename: package-lock.json
-    checksum: 2d04fb5b0b3a8b1e605867a3bf6b5a5c420fb24389e693c2e07c3af28991ed56
+    checksum: 4dc3e113527983251f6351c3fbfb9bc6129331c3ee85a78f10d72cdcc9de8186
   - filename: src/commands/cm/stacks/validate-regex.ts
     checksum: 883813675c599a981450130bcd377eb44aad27bf86628c56bfc89a7f1ac47d5e
   - filename: messages/index.json
