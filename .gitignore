@@ -1,5 +1,7 @@
 *-debug.log
 *-error.log
+*.log
+.dccache
 /.nyc_output
 /dist
 /lib
