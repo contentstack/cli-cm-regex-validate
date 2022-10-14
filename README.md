@@ -1,5 +1,4 @@
-cli-cm-regex-validate
-=====================
+# cli-cm-regex-validate
 
 Validate Fields with Regex Property of Content Type and Global Field in a Stack
 
@@ -9,26 +8,35 @@ Validate Fields with Regex Property of Content Type and Global Field in a Stack
 [![License](https://img.shields.io/npm/l/cli-cm-regex-validate.svg)](https://github.com/contentstack/cli-cm-regex-validate/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
-$ npm install -g @contentstack/cli-cm-regex-validate
+$ npm install -g @contentstack/cli
+$ csdx plugins:install @contentstack/cli-cm-regex-validate
 $ csdx COMMAND
 running command...
 $ csdx (-v|--version|version)
-@contentstack/cli-cm-regex-validate/1.0.0 linux-x64 node-v10.19.0
+@contentstack/cli-cm-regex-validate/1.0.2 darwin-x64 node-v16.17.0
 $ csdx --help [COMMAND]
 USAGE
   $ csdx COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`csdx cm:stacks:validate-regex`](#csdx-cmstacksvalidate-regex)
+
+- [`csdx cm:stacks:validate-regex`](#csdx-cmstacksvalidate-regex)
 
 ## `csdx cm:stacks:validate-regex`
 
@@ -59,5 +67,6 @@ EXAMPLES
   $ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>
 ```
 
-_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.0.0/src/commands/cm/stacks/validate-regex.ts)_
+_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.0.2/src/commands/cm/stacks/validate-regex.ts)_
+
 <!-- commandsstop -->
