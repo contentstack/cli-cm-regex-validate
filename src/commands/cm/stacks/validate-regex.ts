@@ -1,4 +1,5 @@
-import { Command, flags } from "@contentstack/cli-command";
+import { Command } from "@contentstack/cli-command";
+import { flags as _flags } from '@contentstack/cli-utilities';
 import { inquireAlias, inquireModule } from "../../../utils/interactive";
 import connectStack from "../../../utils/connect-stack";
 const regexMessages = require("../../../../messages/index.json").validateRegex;
@@ -7,20 +8,20 @@ export default class ValidateRegex extends Command {
   static description = regexMessages.command.description;
 
   static flags = {
-    help: flags.help({ char: "h", description: regexMessages.command.help }),
-    alias: flags.string({
+    help: _flags.help({ char: "h", description: regexMessages.command.help }),
+    alias: _flags.string({
       char: "a",
       description: regexMessages.command.alias,
     }),
-    contentType: flags.boolean({
+    contentType: _flags.boolean({
       char: "c",
       description: regexMessages.command.contentTypes,
     }),
-    globalField: flags.boolean({
+    globalField: _flags.boolean({
       char: "g",
       description: regexMessages.command.globalFields,
     }),
-    filePath: flags.string({
+    filePath: _flags.string({
       char: "f",
       description: regexMessages.command.filePath,
     }),
@@ -37,7 +38,7 @@ export default class ValidateRegex extends Command {
   ];
 
   async run() {
-    const commandObject = this.parse(ValidateRegex);
+    const commandObject = await this.parse(ValidateRegex);
 
     await inquireAlias(commandObject.flags);
 
