@@ -7,7 +7,7 @@ const regexMessages = require("../../../../messages/index.json").validateRegex;
 export default class ValidateRegex extends Command {
   static description = regexMessages.command.description;
 
-  static flags: any = {
+  static flags = {
     help: flags.help({ char: "h", description: regexMessages.command.help }),
     alias: flags.string({
       char: "a",
