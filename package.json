@@ -62,9 +62,9 @@
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
-    "@contentstack/cli-command": "^1.2.1",
-    "@contentstack/cli-utilities": "^1.3.2",
-    "@contentstack/management": "^1.2.4",
+    "@contentstack/cli-command": "^1.2.5",
+    "@contentstack/cli-utilities": "^1.4.1",
+    "@contentstack/management": "^1.8.0",
     "cli-table3": "^0.6.0",
     "cli-ux": "^6.0.9",
     "inquirer": "^8.2.4",
