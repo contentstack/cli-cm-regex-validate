@@ -1,4 +1,5 @@
-import { Command, flags } from "@contentstack/cli-command";
+import { Command } from "@contentstack/cli-command";
+import { flags } from '@contentstack/cli-utilities';
 import { inquireAlias, inquireModule } from "../../../utils/interactive";
 import connectStack from "../../../utils/connect-stack";
 const regexMessages = require("../../../../messages/index.json").validateRegex;
@@ -37,7 +38,7 @@ export default class ValidateRegex extends Command {
   ];
 
   async run() {
-    const commandObject = this.parse(ValidateRegex);
+    const commandObject = await this.parse(ValidateRegex);
 
     await inquireAlias(commandObject.flags);
 
