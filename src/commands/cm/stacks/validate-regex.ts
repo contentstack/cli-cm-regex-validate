@@ -1,13 +1,14 @@
 import { Command } from "@contentstack/cli-command";
-import { flags } from '@contentstack/cli-utilities';
-import { inquireAlias, inquireModule } from "../../../utils/interactive";
+import { FlagInput, flags } from '@contentstack/cli-utilities';
+
 import connectStack from "../../../utils/connect-stack";
+import { inquireAlias, inquireModule } from "../../../utils/interactive";
 const regexMessages = require("../../../../messages/index.json").validateRegex;
 
 export default class ValidateRegex extends Command {
   static description = regexMessages.command.description;
 
-  static flags = {
+  static flags: FlagInput = {
     help: flags.help({ char: "h", description: regexMessages.command.help }),
     alias: flags.string({
       char: "a",
