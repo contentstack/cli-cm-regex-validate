@@ -21,7 +21,7 @@ $ npm install -g @contentstack/cli-cm-regex-validate
 $ csdx COMMAND
 running command...
 $ csdx (--version)
-@contentstack/cli-cm-regex-validate/1.1.4 darwin-arm64 node-v16.19.0
+@contentstack/cli-cm-regex-validate/1.1.4 darwin-arm64 node-v18.15.0
 $ csdx --help [COMMAND]
 USAGE
   $ csdx COMMAND
