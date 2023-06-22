@@ -21,7 +21,7 @@ $ npm install -g @contentstack/cli-cm-regex-validate
 $ csdx COMMAND
 running command...
 $ csdx (--version)
-@contentstack/cli-cm-regex-validate/1.1.4 darwin-arm64 node-v18.15.0
+@contentstack/cli-cm-regex-validate/1.1.5 darwin-arm64 node-v18.15.0
 $ csdx --help [COMMAND]
 USAGE
   $ csdx COMMAND
@@ -69,5 +69,5 @@ EXAMPLES
   $ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>
 ```
 
-_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.1.4/src/commands/cm/stacks/validate-regex.ts)_
+_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.1.5/src/commands/cm/stacks/validate-regex.ts)_
 <!-- commandsstop -->
