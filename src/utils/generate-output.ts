@@ -29,9 +29,9 @@ export default async function generateOutput(flags: any, invalidRegex: any, tabl
     tableData.forEach((row: any) => {
       table.push(row)
     })
+    let messageAndPath = `${regexMessages.output.csvOutput} ${storagePath}`
     cliux.print(table.toString())
-    cliux.print(regexMessages.output.csvOutput)
-    cliux.print(storagePath)
+    cliux.print(messageAndPath)
     cliux.print(regexMessages.output.docsLink)
   } else {
     cliux.print(regexMessages.output.noInvalidRegex)
