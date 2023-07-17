@@ -2,6 +2,7 @@ import * as jsonexport from 'jsonexport'
 import * as Table from 'cli-table3'
 import * as path from 'path'
 import * as fs from 'fs'
+import { cliux } from '@contentstack/cli-utilities'
 const regexMessages = require('../../messages/index.json').validateRegex
 
 export default async function generateOutput(flags: any, invalidRegex: any, tableData: any) {
@@ -28,10 +29,11 @@ export default async function generateOutput(flags: any, invalidRegex: any, tabl
     tableData.forEach((row: any) => {
       table.push(row)
     })
-    console.log(table.toString())
-    console.log(regexMessages.output.csvOutput, storagePath)
-    console.log(regexMessages.output.docsLink)
+    let messageAndPath = `${regexMessages.output.csvOutput} ${storagePath}`
+    cliux.print(table.toString())
+    cliux.print(messageAndPath)
+    cliux.print(regexMessages.output.docsLink)
   } else {
-    console.log(regexMessages.output.noInvalidRegex)
+    cliux.print(regexMessages.output.noInvalidRegex)
   }
 }
