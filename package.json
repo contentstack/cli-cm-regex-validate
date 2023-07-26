@@ -67,7 +67,7 @@
     "cli-table3": "^0.6.0",
     "cli-ux": "^6.0.9",
     "inquirer": "^8.2.4",
-    "jest": "^29.3.1",
+    "jest": "^29.6.0",
     "jsonexport": "^3.2.0",
     "tslib": "^2.5.3",
     "safe-regex": "^2.1.1",
