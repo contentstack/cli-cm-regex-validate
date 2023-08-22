@@ -16,7 +16,7 @@ jobs:
 
       - name: get-npm-version
         id: package-version
-        uses: martinbeentjes/npm-get-version-action@master
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: install npm packall
         run: npm install npm-pack-all
 
@@ -26,25 +26,9 @@ jobs:
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           tag_prefix: "v"
-      - name: Create Release
+      - name: github-release
         if: steps.update_tag.outputs.tagname
-        uses: actions/create-release@v1.1.4
-        id: create_release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ steps.update_tag.outputs.tagname }}
-          release_name: Release ${{ steps.update_tag.outputs.tagname }}
-          draft: false # Default value, but nice to set explicitly
-          prerelease: false # Default value, but nice to set explicitly
-      - name: Upload Release Asset
-        if: steps.update_tag.outputs.tagname
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
+        id: github-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing its ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: ./contentstack-cli-cm-regex-validate-${{ steps.package-version.outputs.current-version }}.tgz
-          asset_name: contentstack-cli-cm-regex-validate-${{ steps.package-version.outputs.current-version }}.tgz
-          asset_content_type: application/tgz
+        run:  gh release create v${{ steps.package-version.outputs.current-version }} --title "Release ${{ steps.package-version.outputs.current-version }}" --generate-notes ./contentstack-cli-cm-regex-validate-${{ steps.package-version.outputs.current-version }}.tgz
