@@ -61,15 +61,9 @@
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@contentstack/cli-command": "^1.2.10",
     "@contentstack/cli-utilities": "^1.5.0",
-    "@contentstack/management": "^1.8.0",
-=======
-    "@contentstack/cli-command": "^1.2.9",
-    "@contentstack/cli-utilities": "^1.4.5",
     "@contentstack/management": "^1.10.1",
->>>>>>> snyk-upgrade-1895b915a714870bedb2750f974ae844
     "cli-table3": "^0.6.0",
     "cli-ux": "^6.0.9",
     "inquirer": "^8.2.4",
