@@ -72,5 +72,10 @@
     "tslib": "^2.6.1",
     "safe-regex": "^2.1.1",
     "uuid": "^9.0.0"
+  },
+  "csdxConfig": {
+    "shortCommandName": {
+      "cm:stacks:validate-regex": "RGXVLD"
+    }
   }
 }
