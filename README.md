@@ -11,7 +11,7 @@ and rectify them.
 [![License](https://img.shields.io/npm/l/cli-cm-regex-validate.svg)](https://github.com/contentstack/cli-cm-regex-validate/blob/master/package.json)
 
 <!-- toc -->
-* [cli-cm-regex-validate](#cli-cm-regex-validate)
+* [Regex Validation CLI Plugin](#regex-validation-cli-plugin)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -23,11 +23,11 @@ and rectify them.
 ```sh-session
 $ npm install -g @contentstack/cli
 
-$ csdx plugins:install https://github.com/contentstack/cli-cm-regex-validate/releases/download/v1.1.11/contentstack-cli-cm-regex-validate-1.1.11.tgz
+$ csdx plugins:install https://github.com/contentstack/cli-cm-regex-validate/releases/download/v1.1.12/contentstack-cli-cm-regex-validate-1.1.12.tgz
 
 $ csdx plugins
 running command...
-@contentstack/cli-cm-regex-validate/1.1.11 darwin-arm64 node-v20.8.0
+@contentstack/cli-cm-regex-validate/1.1.12 darwin-arm64 node-v20.8.0
 
 $ csdx --help [COMMAND]
 USAGE
@@ -80,5 +80,5 @@ EXAMPLES
   $ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>
 ```
 
-_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.1.11/src/commands/cm/stacks/validate-regex.ts)_
+_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.1.12/src/commands/cm/stacks/validate-regex.ts)_
 <!-- commandsstop -->
