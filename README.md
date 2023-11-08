@@ -1,6 +1,9 @@
-# cli-cm-regex-validate
+# Regex Validation CLI Plugin
 
-Validate Fields with Regex Property of Content Type and Global Field in a Stack
+The “Regex Validation” plugin in Contentstack CLI allows users to search for invalid regexes within the content types and global fields of their stack.
+
+Using the CLI “Regex Validation” plugin, you can find the invalid regexes within your stack
+and rectify them.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/cli-cm-regex-validate.svg)](https://npmjs.org/package/cli-cm-regex-validate)
@@ -8,27 +11,35 @@ Validate Fields with Regex Property of Content Type and Global Field in a Stack
 [![License](https://img.shields.io/npm/l/cli-cm-regex-validate.svg)](https://github.com/contentstack/cli-cm-regex-validate/blob/master/package.json)
 
 <!-- toc -->
-* [cli-cm-regex-validate](#cli-cm-regex-validate)
+* [Regex Validation CLI Plugin](#regex-validation-cli-plugin)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
-<!-- usage -->
+<!-- usage-no-overwrite -->
+#### Step 1:
 ```sh-session
-$ npm install -g @contentstack/cli-cm-regex-validate
-$ csdx COMMAND
+$ npm install -g @contentstack/cli
+
+$ csdx plugins:install https://github.com/contentstack/cli-cm-regex-validate/releases/download/v1.1.12/contentstack-cli-cm-regex-validate-1.1.12.tgz
+
+$ csdx plugins
 running command...
-$ csdx (--version)
-@contentstack/cli-cm-regex-validate/1.1.6 darwin-arm64 node-v18.15.0
+@contentstack/cli-cm-regex-validate/1.1.12 darwin-arm64 node-v20.8.0
+
 $ csdx --help [COMMAND]
 USAGE
   $ csdx COMMAND
 ...
 ```
-<!-- usagestop -->
+#### Step 2:
+[Set the region](https://www.contentstack.com/docs/developers/cli/configure-regions-in-the-cli#set-region)
+<!-- usagestop-overwrite -->
 
+#### Step 3:
+[Configured management token alias](https://www.contentstack.com/docs/developers/cli/cli-authentication#add-management-token)
 # Commands
 
 <!-- commands -->
@@ -69,5 +80,5 @@ EXAMPLES
   $ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>
 ```
 
-_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.1.6/src/commands/cm/stacks/validate-regex.ts)_
+_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.1.12/src/commands/cm/stacks/validate-regex.ts)_
 <!-- commandsstop -->
