@@ -61,16 +61,16 @@
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
-    "@contentstack/cli-command": "^1.2.12",
-    "@contentstack/cli-utilities": "^1.5.2",
+    "@contentstack/cli-command": "^1.2.16",
+    "@contentstack/cli-utilities": "^1.5.7",
     "@contentstack/management": "^1.10.2",
     "cli-table3": "^0.6.0",
     "cli-ux": "^6.0.9",
     "inquirer": "^8.2.4",
     "jest": "^29.7.0",
     "jsonexport": "^3.2.0",
-    "tslib": "^2.6.2",
     "safe-regex": "^2.1.1",
+    "tslib": "^2.6.2",
     "uuid": "^9.0.0"
   },
   "csdxConfig": {
