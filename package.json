@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@contentstack/cli-command": "^1.2.12",
-    "@contentstack/cli-utilities": "^1.5.2",
+    "@contentstack/cli-utilities": "^1.5.4",
     "@contentstack/management": "^1.10.2",
     "cli-table3": "^0.6.0",
     "cli-ux": "^6.0.9",
