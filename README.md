@@ -23,11 +23,11 @@ and rectify them.
 ```sh-session
 $ npm install -g @contentstack/cli
 
-$ csdx plugins:install https://github.com/contentstack/cli-cm-regex-validate/releases/download/v1.1.12/contentstack-cli-cm-regex-validate-1.1.12.tgz
+$ csdx plugins:install https://github.com/contentstack/cli-cm-regex-validate/releases/download/v1.2.0/contentstack-cli-cm-regex-validate-1.2.0.tgz
 
 $ csdx plugins
 running command...
-@contentstack/cli-cm-regex-validate/1.1.12 darwin-arm64 node-v20.8.0
+@contentstack/cli-cm-regex-validate/1.2.0 darwin-arm64 node-v20.8.0
 
 $ csdx --help [COMMAND]
 USAGE
