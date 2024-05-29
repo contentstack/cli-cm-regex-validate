@@ -8,7 +8,7 @@ const regexMessages = require("../../../../messages/index.json").validateRegex;
 export default class ValidateRegex extends Command {
   static description = regexMessages.command.description;
 
-  static flags: FlagInput = {
+  static flags: any = {
     help: flags.help({ char: "h", description: regexMessages.command.help }),
     alias: flags.string({
       char: "a",
@@ -40,7 +40,6 @@ export default class ValidateRegex extends Command {
 
   async run() {
     const commandObject = await this.parse(ValidateRegex);
-
     await inquireAlias(commandObject.flags);
 
     let tokenDetails: any;
