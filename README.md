@@ -11,15 +11,18 @@ and rectify them.
 [![License](https://img.shields.io/npm/l/cli-cm-regex-validate.svg)](https://github.com/contentstack/cli-cm-regex-validate/blob/master/package.json)
 
 <!-- toc -->
-* [Regex Validation CLI Plugin](#regex-validation-cli-plugin)
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Regex Validation CLI Plugin](#regex-validation-cli-plugin)
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage-no-overwrite -->
+
 #### Step 1:
+
 ```sh-session
 $ npm install -g @contentstack/cli
 
@@ -34,16 +37,22 @@ USAGE
   $ csdx COMMAND
 ...
 ```
+
 #### Step 2:
+
 [Set the region](https://www.contentstack.com/docs/developers/cli/configure-regions-in-the-cli#set-region)
+
 <!-- usagestop-overwrite -->
 
 #### Step 3:
+
 [Configured management token alias](https://www.contentstack.com/docs/developers/cli/cli-authentication#add-management-token)
+
 # Commands
 
 <!-- commands -->
-* [`csdx cm:stacks:validate-regex`](#csdx-cmstacksvalidate-regex)
+
+- [`csdx cm:stacks:validate-regex`](#csdx-cmstacksvalidate-regex)
 
 ## `csdx cm:stacks:validate-regex`
 
@@ -81,4 +90,5 @@ EXAMPLES
 ```
 
 _See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.2.1/src/commands/cm/stacks/validate-regex.ts)_
+
 <!-- commandsstop -->
