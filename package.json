@@ -1,12 +1,12 @@
 {
   "name": "@contentstack/cli-cm-regex-validate",
   "description": "Validate Fields with Regex Property of Content Type and Global Field in a Stack",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Contentstack",
   "bugs": "https://github.com/contentstack/cli-cm-regex-validate/issues",
   "devDependencies": {
-    "@oclif/plugin-help": "^3.2.3",
-    "@oclif/test": "^1.2.8",
+    "@oclif/plugin-help": "^6.0.22",
+    "@oclif/test": "^3.2.5",
     "@types/chai": "^4.2.21",
     "@types/inquirer": "^8.1.1",
     "@types/jest": "^29.1.2",
@@ -61,9 +61,9 @@
     "version": "oclif-dev readme && git add README.md"
   },
   "dependencies": {
-    "@contentstack/cli-command": "^1.2.16",
-    "@contentstack/cli-utilities": "^1.5.7",
-    "@contentstack/management": "^1.13.0",
+    "@contentstack/cli-command": "^1.2.17",
+    "@contentstack/cli-utilities": "^1.6.1",
+    "@contentstack/management": "^1.16.0",
     "cli-table3": "^0.6.0",
     "cli-ux": "^6.0.9",
     "inquirer": "^8.2.4",
@@ -71,7 +71,7 @@
     "jsonexport": "^3.2.0",
     "safe-regex": "^2.1.1",
     "tslib": "^2.6.2",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1"
   },
   "csdxConfig": {
     "shortCommandName": {
