@@ -71,7 +71,7 @@
     "jsonexport": "^3.2.0",
     "safe-regex": "^2.1.1",
     "tslib": "^2.6.2",
-    "uuid": "^9.0.1"
+    "uuid": "^11.0.3"
   },
   "csdxConfig": {
     "shortCommandName": {
