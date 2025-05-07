@@ -1,4 +1,7 @@
 fileignoreconfig:
+- filename: .github/workflows/secrets-scan.yml
+  ignore_detectors:
+    - filecontent
   - filename: package-lock.json
     checksum: 4dc3e113527983251f6351c3fbfb9bc6129331c3ee85a78f10d72cdcc9de8186
   - filename: src/commands/cm/stacks/validate-regex.ts
