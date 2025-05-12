@@ -19,6 +19,7 @@
     "eslint-config-oclif": "^4.0.0",
     "eslint-config-oclif-typescript": "^1.0.3",
     "globby": "^10.0.2",
+    "husky": "^9.1.7",
     "mocha": "^10.8.2",
     "nyc": "^15.1.0",
     "oclif": "^3.17.2",
@@ -58,7 +59,8 @@
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif manifest && oclif readme",
     "test": "jest --detectOpenHandles --silent",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "prepare": "npx husky && chmod +x .husky/pre-commit"
   },
   "dependencies": {
     "@contentstack/cli-command": "^1.5.0",
