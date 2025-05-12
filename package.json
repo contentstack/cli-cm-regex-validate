@@ -1,7 +1,7 @@
 {
   "name": "@contentstack/cli-cm-regex-validate",
   "description": "Validate Fields with Regex Property of Content Type and Global Field in a Stack",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "Contentstack",
   "bugs": "https://github.com/contentstack/cli-cm-regex-validate/issues",
   "devDependencies": {
@@ -19,6 +19,7 @@
     "eslint-config-oclif": "^4.0.0",
     "eslint-config-oclif-typescript": "^1.0.3",
     "globby": "^10.0.2",
+    "husky": "^9.1.7",
     "mocha": "^10.8.2",
     "nyc": "^15.1.0",
     "oclif": "^3.17.2",
@@ -58,12 +59,13 @@
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif manifest && oclif readme",
     "test": "jest --detectOpenHandles --silent",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "prepare": "npx husky && chmod +x .husky/pre-commit"
   },
   "dependencies": {
-    "@contentstack/cli-command": "^1.3.2",
-    "@contentstack/cli-utilities": "^1.8.0",
-    "@contentstack/management": "^1.18.4",
+    "@contentstack/cli-command": "^1.5.0",
+    "@contentstack/cli-utilities": "^1.11.0",
+    "@contentstack/management": "^1.20.3",
     "cli-table3": "^0.6.5",
     "cli-ux": "^6.0.9",
     "inquirer": "^8.2.6",
