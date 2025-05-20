@@ -20,6 +20,7 @@ export default async function processStack(flags: any, stack: any, startTime: nu
       throw new Error(regexMessages.errors.stack.contentTypes)
     })
   }
+
   if (flags.globalField) {
     const globalFields = stack.globalField().query(query).find()
     await globalFields.then((globalFieldsObject: any) => {
@@ -30,6 +31,7 @@ export default async function processStack(flags: any, stack: any, startTime: nu
       throw new Error(regexMessages.errors.stack.globalFields)
     })
   }
+
   cli.action.stop(regexMessages.cliAction.processStackStop + (Date.now() - processTime) + ' ms')
   await generateOutput(flags, invalidRegex, tableData)
 }
