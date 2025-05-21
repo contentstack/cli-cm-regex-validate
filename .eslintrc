@@ -1,9 +1,18 @@
 {
-  "extends": [
-    "oclif",
-    "oclif-typescript"
-  ],
+  "extends": ["eslint-config-oclif", "eslint-config-oclif-typescript"],
   "rules": {
-    "no-console": "off"
+    "unicorn/prefer-module": "off",
+    "@typescript-eslint/no-require-imports": "off",
+    "unicorn/no-array-for-each": "off",
+    "camelcase": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+
+   "quotes": ["error", "single", { "avoidEscape": true }],
+    "semi": ["error", "never"],
+    "unicorn/import-style": "off",
+    "unicorn/prefer-node-protocol": "off",
+    "unicorn/consistent-function-scoping": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "object-curly-spacing": ["error", "never"]
   }
 }
