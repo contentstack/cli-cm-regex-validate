@@ -7,13 +7,13 @@ const safeRegex = (document: any, invalidRegex: any, tableData: any, type: strin
     function path(currentFieldPath: string, uid: string) {
       return currentFieldPath.trim() === '' ? uid : [currentFieldPath, uid].join('.')
     }
+
     schema.forEach((field: any) => {
       newPath = path(currentPath, field.uid)
-      if (field.data_type === 'group' || field.data_type === 'global_field') {
-        if (field.schema) {
-          checkSchemaFieldRegex(field.schema, newPath, true)
-        }
+      if ((field.data_type === 'group' || field.data_type === 'global_field') && field.schema) {
+        checkSchemaFieldRegex(field.schema, newPath, true)
       }
+
       if (field.data_type === 'blocks') {
         field.blocks.forEach((block: any) => {
           if (block.schema) {
@@ -23,6 +23,7 @@ const safeRegex = (document: any, invalidRegex: any, tableData: any, type: strin
           }
         })
       }
+
       if (field.format) {
         const result = safe(field.format)
         if (result) {
@@ -49,6 +50,7 @@ const safeRegex = (document: any, invalidRegex: any, tableData: any, type: strin
       tableData.push([type, document.title, document.uid, currentCount])
     }
   }
+
   checkSchemaFieldRegex(document.schema, '', false)
 }
 
