@@ -35,6 +35,7 @@ describe('Interactive', () => {
       const response = await inquireModule(flags)
       expect(response).toBeUndefined()
     }
+
     testModuleFlags({contentType: true})
     testModuleFlags({globalField: true})
     testModuleFlags({contentType: true, globalField: true})
