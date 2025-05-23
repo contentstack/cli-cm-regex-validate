@@ -5,6 +5,7 @@ export const validateAlias = async function (alias: any) {
   if (!alias || alias.trim() === '') {
     return regexMessages.interactive.required
   }
+
   return true
 }
 
@@ -26,6 +27,7 @@ export const validateModule = async function (choice: any) {
   if (choice.length === 0) {
     return regexMessages.interactive.selectOne
   }
+
   return true
 }
 
