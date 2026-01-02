@@ -35,9 +35,9 @@ describe('Generate Output after Stack is Processed', () => {
       return true
     })
     await generateOutput(flags, invalidJsonOutput, invalidTableOutput)
-    expect(path.resolve).toBeCalled()
-    expect(fs.existsSync).toBeCalled()
-    expect(fs.writeFileSync).toBeCalled()
+    expect(path.resolve).toHaveBeenCalled()
+    expect(fs.existsSync).toHaveBeenCalled()
+    expect(fs.writeFileSync).toHaveBeenCalled()
     expect(consoleSpy).toHaveBeenCalledTimes(1)
     expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.tableOutput)
   })
@@ -52,10 +52,10 @@ describe('Generate Output after Stack is Processed', () => {
       return false
     })
     await generateOutput(flags, invalidJsonOutput, invalidTableOutput)
-    expect(path.resolve).toBeCalled()
-    expect(fs.existsSync).toBeCalled()
-    expect(fs.mkdirSync).toBeCalled()
-    expect(fs.writeFileSync).toBeCalled()
+    expect(path.resolve).toHaveBeenCalled()
+    expect(fs.existsSync).toHaveBeenCalled()
+    expect(fs.mkdirSync).toHaveBeenCalled()
+    expect(fs.writeFileSync).toHaveBeenCalled()
     expect(consoleSpy).toHaveBeenCalledTimes(1)
     expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.tableOutput)
   })
@@ -65,7 +65,7 @@ describe('Generate Output after Stack is Processed', () => {
     await generateOutput({}, invalidJsonOutput, invalidTableOutput)
     expect(consoleSpy).toHaveBeenCalledTimes(1)
     expect(consoleSpy).toHaveBeenCalledWith(regexMessages.output.tableOutput)
-    expect(fs.writeFileSync).toBeCalled()
+    expect(fs.writeFileSync).toHaveBeenCalled()
   })
 
   test('Invalid Regex is not found', async () => {
