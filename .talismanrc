@@ -3,7 +3,7 @@ fileignoreconfig:
   ignore_detectors:
     - filecontent
 - filename: package-lock.json
-  checksum: cd4e5230c9a969074cd1f5033f6fa609432e23eec0e06d66649271b5f76c831f
+  checksum: da788ffd24aacd020123f78e5deb4db8e99f041c03e4cbd7126a6f19846c2e9b
 - filename: src/commands/cm/stacks/validate-regex.ts
 - filename: .husky/pre-commit
   checksum: 1b9367d219802de2e3a8af9c5c698e0c255c00af89339d73bdbb8acf5275079f
