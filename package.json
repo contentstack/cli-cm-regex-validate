@@ -65,7 +65,7 @@
     "prepare": "npx husky && chmod +x .husky/pre-commit"
   },
   "dependencies": {
-    "@contentstack/cli-command": "^1.7.0",
+    "@contentstack/cli-command": "^1.7.1",
     "@contentstack/cli-utilities": "^1.14.4",
     "@contentstack/management": "^1.27.0",
     "cli-table3": "^0.6.5",
