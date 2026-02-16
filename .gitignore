@@ -11,3 +11,4 @@ node_modules
 /coverage
 /results
 oclif.manifest.json
+.DS_Store
