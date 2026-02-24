@@ -67,7 +67,7 @@
   "dependencies": {
     "@contentstack/cli-command": "^1.7.2",
     "@contentstack/cli-utilities": "^1.17.1",
-    "@contentstack/management": "^1.27.4",
+    "@contentstack/management": "^1.27.6",
     "cli-table3": "^0.6.5",
     "cli-ux": "^6.0.9",
     "inquirer": "^8.2.7",
