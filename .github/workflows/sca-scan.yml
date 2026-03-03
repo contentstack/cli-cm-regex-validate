@@ -16,3 +16,6 @@ jobs:
           json: true
         continue-on-error: true
       - uses: contentstack/sca-policy@main
+      json: true
+        continue-on-error: true
+      - uses: contentstack/sca-policy@main
