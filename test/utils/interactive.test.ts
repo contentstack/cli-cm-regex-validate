@@ -1,5 +1,5 @@
-const inquirer = require('inquirer')
-const {inquireAlias, inquireModule, validateAlias, validateModule} = require('../../src/utils/interactive.ts')
+import inquirer from 'inquirer'
+import {inquireAlias, inquireModule, validateAlias, validateModule} from '../../src/utils/interactive'
 const regexMessages = require('../../messages/index.json').validateRegex
 
 describe('Interactive', () => {
@@ -23,10 +23,10 @@ describe('Interactive', () => {
     const alias = 'Test Token'
     const flags = {}
     const response = await validateAlias(alias)
-    expect(response).toBe(true)
-    jest.spyOn(inquirer, 'prompt').mockImplementation(() => {
-      return {alias: alias}
-    })
+    expect(response).toBe(true);
+    (jest.spyOn(inquirer, 'prompt') as jest.Mock).mockImplementation(() =>
+      Promise.resolve({alias: alias}),
+    )
     await inquireAlias(flags)
   })
 
@@ -50,30 +50,30 @@ describe('Interactive', () => {
   test('Content Type Module is Selected', async () => {
     const choice: string[] = ['contentType']
     const response = await validateModule(choice)
-    expect(response).toBe(true)
-    jest.spyOn(inquirer, 'prompt').mockImplementation(() => {
-      return {choice: choice}
-    })
+    expect(response).toBe(true);
+    (jest.spyOn(inquirer, 'prompt') as jest.Mock).mockImplementation(() =>
+      Promise.resolve({choice: choice}),
+    )
     await inquireModule(choice)
   })
 
   test('Global Field Module is Selected', async () => {
     const choice: string[] = ['globalField']
     const response = await validateModule(choice)
-    expect(response).toBe(true)
-    jest.spyOn(inquirer, 'prompt').mockImplementation(() => {
-      return {choice: choice}
-    })
+    expect(response).toBe(true);
+    (jest.spyOn(inquirer, 'prompt') as jest.Mock).mockImplementation(() =>
+      Promise.resolve({choice: choice}),
+    )
     await inquireModule(choice)
   })
 
   test('Both Modules are Selected', async () => {
     const choice: string[] = ['contentType', 'globalField']
     const response = await validateModule(choice)
-    expect(response).toBe(true)
-    jest.spyOn(inquirer, 'prompt').mockImplementation(() => {
-      return {choice: choice}
-    })
+    expect(response).toBe(true);
+    (jest.spyOn(inquirer, 'prompt') as jest.Mock).mockImplementation(() =>
+      Promise.resolve({choice: choice}),
+    )
     await inquireModule(choice)
   })
 })

@@ -11,10 +11,9 @@ and rectify them.
 [![License](https://img.shields.io/npm/l/cli-cm-regex-validate.svg)](https://github.com/contentstack/cli-cm-regex-validate/blob/master/package.json)
 
 <!-- toc -->
-
-- [Regex Validation CLI Plugin](#regex-validation-cli-plugin)
-- [Usage](#usage)
-- [Commands](#commands)
+* [Regex Validation CLI Plugin](#regex-validation-cli-plugin)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
@@ -51,8 +50,7 @@ USAGE
 # Commands
 
 <!-- commands -->
-
-- [`csdx cm:stacks:validate-regex`](#csdx-cmstacksvalidate-regex)
+* [`csdx cm:stacks:validate-regex`](#csdx-cmstacksvalidate-regex)
 
 ## `csdx cm:stacks:validate-regex`
 
@@ -89,6 +87,5 @@ EXAMPLES
   $ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>
 ```
 
-_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.2.1/src/commands/cm/stacks/validate-regex.ts)_
-
+_See code: [src/commands/cm/stacks/validate-regex.ts](https://github.com/contentstack/cli-cm-regex-validate/blob/v1.2.6/src/commands/cm/stacks/validate-regex.ts)_
 <!-- commandsstop -->
