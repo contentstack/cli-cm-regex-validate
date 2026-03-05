@@ -12,3 +12,4 @@ node_modules
 /results
 oclif.manifest.json
 .DS_Store
+tsconfig.tsbuildinfo

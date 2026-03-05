@@ -1,4 +1,4 @@
-import * as inquirer from 'inquirer'
+import inquirer from 'inquirer'
 const regexMessages = require('../../messages/index.json').validateRegex
 
 export const validateAlias = async function (alias: any) {
