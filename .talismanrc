@@ -1,14 +1,4 @@
 fileignoreconfig:
-- filename: .github/workflows/secrets-scan.yml
-  ignore_detectors:
-    - filecontent
 - filename: package-lock.json
-  checksum: e25b46ee1037f59d117f4678f06099532b2a2c9c451090576de78164e34aec33
-- filename: src/commands/cm/stacks/validate-regex.ts
-- filename: .husky/pre-commit
-  checksum: 1b9367d219802de2e3a8af9c5c698e0c255c00af89339d73bdbb8acf5275079f
-- filename: messages/index.json
-  checksum: 01e9c9b943bfa1ebe6e7d6bede86b55b08641d64b9cc8af6cedea5c0a6273468
-- filename: test/utils/connect-stack.test.ts
-  checksum: 2d0ae64f3b35871b1a27ca4279ed13515147373d91e3e6bc341cb5b93fb12602
+  checksum: e6965346504945488e64ae37db842492fb5b145d7dff44a700ab2fe2e64d327c
 version: ""
