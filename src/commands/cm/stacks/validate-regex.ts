@@ -6,7 +6,7 @@ import {inquireAlias, inquireModule} from '../../../utils/interactive'
 const regexMessages = require('../../../../messages/index.json').validateRegex
 
 export default class ValidateRegex extends Command {
-  static description = regexMessages.command.description;
+  static description = regexMessages.command.description
 
   static flags: any = {
     help: flags.help({char: 'h', description: regexMessages.command.help}),
@@ -26,7 +26,7 @@ export default class ValidateRegex extends Command {
       char: 'f',
       description: regexMessages.command.filePath,
     }),
-  };
+  }
 
   static examples = [
     '$ csdx cm:stacks:validate-regex',
@@ -36,7 +36,7 @@ export default class ValidateRegex extends Command {
     '$ csdx cm:stacks:validate-regex -f <path/to/the/directory>',
     '$ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g',
     '$ csdx cm:stacks:validate-regex -a <management_token_alias> -c -g -f <path/to/the/directory>',
-  ];
+  ]
 
   async run() {
     const commandObject = await this.parse(ValidateRegex)
