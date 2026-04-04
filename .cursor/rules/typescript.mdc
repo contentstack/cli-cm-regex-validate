@@ -1,0 +1,31 @@
+---
+description: "TypeScript and ESLint conventions for cli-cm-regex-validate"
+globs: ["**/*.ts", "**/*.tsx"]
+alwaysApply: false
+---
+
+# TypeScript standards
+
+## Compiler
+
+- Project uses `strict: true` in `tsconfig.json` (root `src/` only for emit).
+- Prefer explicit types on public functions and command flags over untyped `any` where practical.
+
+## ESLint (`.eslintrc`)
+
+- Extends `eslint-config-oclif` and `eslint-config-oclif-typescript`.
+- Single quotes; no semicolons; `object-curly-spacing: never`.
+- `require()` for JSON such as `messages/index.json` is allowed (`@typescript-eslint/no-require-imports` is off).
+
+## Imports
+
+- ES modules for TypeScript sources; `require` is acceptable for JSON message bundles and legacy interop per eslint rules.
+
+## Naming
+
+- Files: kebab-case (e.g. `connect-stack.ts`, `validate-regex.ts`).
+- Classes: PascalCase. Functions and variables: camelCase.
+
+## Error handling
+
+- Surface user-facing errors via `this.error()` in commands or localized strings from `messages/index.json` in utilities.

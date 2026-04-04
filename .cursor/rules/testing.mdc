@@ -1,0 +1,32 @@
+---
+description: "Jest and ts-jest testing patterns for cli-cm-regex-validate"
+globs: ["**/*.test.ts", "**/__tests__/**/*.ts"]
+alwaysApply: false
+---
+
+# Testing standards
+
+## Runner
+
+- **Jest** with **ts-jest** (`jest.config.ts`). Do not document Mocha/Chai/Sinon as the primary stack for this repository.
+
+## Conventions
+
+- Test files live under `test/utils/` and mirror `src/utils/` where applicable.
+- Use `describe` / `test` (or `it`) with clear behavior-focused names.
+- Prefer `beforeEach(() => jest.restoreAllMocks())` or `jest.clearAllMocks()` when tests share mocks.
+
+## Mocking
+
+- Mock external I/O: `@contentstack/management`, `fs`, `cli-ux`, `@contentstack/cli-utilities` as needed.
+- Use `jest.spyOn` for targeted spies; `jest.mock` for module substitution.
+- Do not call real Contentstack APIs in unit tests.
+
+## Assertions
+
+- Prefer `toHaveBeenCalled` / `toHaveBeenCalledWith` over deprecated Jest matchers.
+- Use fixture JSON from `test/data/` via `require` for documents and expected invalid-regex output.
+
+## Fixtures
+
+- Keep schema samples and expected arrays in `test/data/*.json` to avoid huge inline objects in tests.

@@ -1,4 +1,10 @@
 fileignoreconfig:
-- filename: package-lock.json
-  checksum: 98330174c261d1793f7e44c1889aea8c6bc1f6dfaa9a5cb4f58ad2c402f4db06
+  - filename: package-lock.json
+    checksum: 3f663322d950acc49b7e8899ca353456b1e7ac6277ac36fdfcac813644fb07d7
+  - filename: .cursor/rules/dev-workflow.md
+    checksum: 9912be426cb15077a67b81bd5801f2a65d367e30204d278c6814ebb1d74661ba
+  - filename: skills/code-review/references/code-review-checklist.md
+    checksum: 8bc8e53a9775258ddfadb40f9a6f415508d87aa9c70c95ebf748737e1ef7dbee
+  - filename: skills/contentstack-cli/references/contentstack-patterns.md
+    checksum: 3e3f445d01c67577dc91b1ba6ee27dcd1ffc1e907b2fbf33ce9b2905eaba239a
 version: ""
