@@ -1,8 +1,11 @@
 fileignoreconfig:
   - filename: skills/dev-workflow/SKILL.md
     checksum: bbe23955b8865b7b44e8adaf414dce2b0127921ed1e35488adf470fdd833270f
-  - filename: skills/code-review/references/code-review-checklist.md
-    checksum: 7b5132bc27e2328f32ecf38941bb117a77be0d83502f15c3a5d1933f3220b6fc
   - filename: package-lock.json
     checksum: 31cf2fecced45ffd2db8b1f7c5258d1c98c2d0be7dd443460cfc070558a85c82
+  - filename: skills/contentstack-cli/SKILL.md
+    checksum: cd7046bfdace6bb82ff6168663f05b0a641e615d61167412d0a4c724c3d18209
+  - filename: skills/code-review/SKILL.md
+    checksum: f4fb9f63b97acf35845f31577840050af6c4f960dc6522477e31decc0b866313
+
 version: ""
