@@ -1,41 +1,46 @@
-# cli-cm-regex-validate
+# cli-cm-regex-validate – Agent guide
 
-`@contentstack/cli-cm-regex-validate` is a **Contentstack CLI** oclif plugin with a single command, **`csdx cm:stacks:validate-regex`**, which scans content types and/or global fields in a stack for regex `format` values that fail the `safe-regex` check, then writes results to CSV and prints a summary table. User-facing copy lives in `messages/index.json`.
+**Universal entry point** for contributors and AI agents. Detailed conventions live in **`skills/*/SKILL.md`**.
 
-## Layout
+## What this repo is
 
-| Area | Path |
-|------|------|
-| Command | `src/commands/cm/stacks/validate-regex.ts` |
-| Utils | `src/utils/` (`connect-stack`, `process-stack`, `safe-regex`, `generate-output`, `interactive`) |
-| Messages | `messages/index.json` |
-| Tests | `test/utils/*.test.ts` |
-| Fixtures | `test/data/*.json` |
+| Field | Detail |
+|-------|--------|
+| **Name:** | [contentstack/cli-cm-regex-validate](https://github.com/contentstack/cli-cm-regex-validate) (`@contentstack/cli-cm-regex-validate` on npm) |
+| **Purpose:** | Contentstack CLI oclif plugin with a single command, **`csdx cm:stacks:validate-regex`**, which scans content types and/or global fields in a stack for regex `format` values that fail the `safe-regex` check, then writes results to CSV and prints a summary table. User-facing copy lives in `messages/index.json`. |
+| **Out of scope (if any):** | Not a general-purpose Contentstack SDK — only this plugin’s command, utils, and tests. |
 
-## Workflow
+## Tech stack (at a glance)
 
-- Run **`npm test`** (Jest + ts-jest) before pushing; CI uses the same in `.github/workflows/unit-tests.yml`.
-- Run ESLint after tests via **`npm run posttest`** (or your team’s eslint invocation from `package.json`).
+| Area | Details |
+|------|---------|
+| Language | TypeScript (`strict`), Node `>=14.0.0` per `package.json` engines |
+| Build | npm; `prepack` runs `tsc -b`, oclif manifest, oclif readme — see `package.json` |
+| Tests | Jest + ts-jest (`jest.config.ts`), `npm test`; suites under `test/utils/`, fixtures `test/data/*.json` |
+| Lint / coverage | ESLint (`.eslintrc`), `npm run posttest` |
+| Other | oclif v3, `@contentstack/cli-command`; CI: Node 22.x — [`.github/workflows/unit-tests.yml`](.github/workflows/unit-tests.yml). **CI runs Jest only** (`npm run test`); **ESLint is not run in CI** — run `npm run posttest` locally before merge. |
 
-## Naming
+## Commands (quick reference)
 
-- Source files: kebab-case.
-- Tests: describe behavior clearly (what should happen under which condition).
+| Command type | Command |
+|--------------|---------|
+| Build (release prep) | `npm run prepack` — cleans `lib`, compiles, generates oclif manifest and readme |
+| Test | `npm test` |
+| Lint | `npm run posttest` |
 
-## Universal skills (any agent)
+CI runs `npm i` and `npm run test` on pull requests — see [`.github/workflows/unit-tests.yml`](.github/workflows/unit-tests.yml). It does **not** run `npm run posttest` (ESLint); run lint locally before merging.
 
-- `@skills/testing` — Jest mocks, fixtures, no live API calls
-- `@skills/contentstack-cli` — SDK flow, schema recursion, `safe-regex`, output
-- `@skills/code-review` — PR checklist (security, packaging, CI, messages)
+## Where the documentation lives: skills
 
-## Cursor rules (IDE)
+| Skill | Path | What it covers |
+|-------|------|----------------|
+| Development workflow | [`skills/dev-workflow/SKILL.md`](skills/dev-workflow/SKILL.md) | Commands, repo layout, naming, hooks, TDD, before merge |
+| Testing | [`skills/testing/SKILL.md`](skills/testing/SKILL.md) | Jest, mocks, fixtures, no live API calls |
+| Contentstack CLI | [`skills/contentstack-cli/SKILL.md`](skills/contentstack-cli/SKILL.md) | Command flow, SDK, schema walk, `safe-regex`, CSV/table output |
+| Code review | [`skills/code-review/SKILL.md`](skills/code-review/SKILL.md) | PR and release checklist |
 
-For file-scoped guidance, Cursor loads rules under `.cursor/rules/`. You can reference them in chat by intent, for example:
+An index with “when to use” hints is in [`skills/README.md`](skills/README.md).
 
-- TypeScript and ESLint conventions — `typescript.mdc`
-- Jest tests — `testing.mdc`
-- Command class — `oclif-commands.mdc`
-- Utils (SDK, safe-regex, output) — `contentstack-cli.mdc`
-- Dev workflow — `dev-workflow.md` (always applied)
+## Using Cursor (optional)
 
-See `.cursor/rules/README.md` for the full index.
+If you use **Cursor**, [`.cursor/rules/README.md`](.cursor/rules/README.md) only points to **[`AGENTS.md`](AGENTS.md)** — same docs as everyone else.

@@ -1,22 +1,7 @@
-# Cursor rules
+# Cursor (optional)
 
-Context-aware guidance for developing `@contentstack/cli-cm-regex-validate` (Contentstack CLI oclif plugin).
+**Cursor** users: start at **[`AGENTS.md`](../../AGENTS.md)**. All conventions live in **`skills/*/SKILL.md`**.
 
-## Rules overview
+This folder only points contributors to **`AGENTS.md`** so editor-specific config does not duplicate the canonical docs.
 
-| File | Scope |
-|------|--------|
-| `dev-workflow.md` | Core workflow, validation commands, links to skills (always applied) |
-| `typescript.mdc` | TypeScript and ESLint conventions |
-| `testing.mdc` | Jest + ts-jest tests |
-| `oclif-commands.mdc` | Command classes under `src/commands/` |
-| `contentstack-cli.mdc` | Utilities under `src/utils/` (SDK, safe-regex, output) |
-
-## How rules apply
-
-- `dev-workflow.md` uses `alwaysApply: true` and broad globs so it loads for most edits.
-- `.mdc` rules load when you work in matching paths (see each file’s `globs`).
-
-## Manual references in chat
-
-You can mention rules by context, for example: TypeScript guidance when editing `src/**/*.ts`, testing patterns when editing `**/*.test.ts`.
+Path from this file to the repo root agent guide: **`../../AGENTS.md`** (two levels up from `.cursor/rules/`).
