@@ -14,8 +14,8 @@
 
 ## Lint and types
 
-- [ ] ESLint passes (`posttest` or project eslint script).
-- [ ] TypeScript changes respect `strict` and project conventions (see `.cursor/rules/typescript.mdc`).
+- [ ] ESLint passes (`posttest` or project eslint script). **Note:** CI does not run ESLint — only `npm test` in [`.github/workflows/unit-tests.yml`](../../../.github/workflows/unit-tests.yml); lint must pass locally before merge.
+- [ ] TypeScript changes respect `strict` and project conventions (see `tsconfig.json`, `.eslintrc`, and [`AGENTS.md`](../../../AGENTS.md)).
 
 ## Packaging and release
 
@@ -25,7 +25,7 @@
 
 ## CI / security workflows
 
-- [ ] Unit test workflow exercises `npm test` on a supported Node version (see `.github/workflows/unit-tests.yml`).
+- [ ] Unit test workflow exercises `npm test` on a supported Node version (see `.github/workflows/unit-tests.yml`). Expect Jest only there — not `posttest`/ESLint unless you add a separate workflow.
 - [ ] SCA / policy workflows unchanged or intentionally updated; no silent downgrade of security checks.
 
 ## Documentation

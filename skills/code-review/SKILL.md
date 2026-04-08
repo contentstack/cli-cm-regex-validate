@@ -3,16 +3,20 @@ name: code-review
 description: PR and release checklist for cli-cm-regex-validate (security, packaging, CI, messages)
 ---
 
-# Code review skill
+# Code review – cli-cm-regex-validate
 
-## Quick reference
+## When to use
 
-- Full detail: [references/code-review-checklist.md](references/code-review-checklist.md)
+- Reviewing a pull request for this repo
+- Preparing a release or verifying packaging and CI alignment
 
-## Summary
+## Instructions
 
-- Confirm tests and lint pass; no secrets in commits; plugin `files` and `prepack` remain consistent; workflows aligned with Node version used in CI.
+- Confirm tests and lint pass locally (CI runs `npm test` only; see [`AGENTS.md`](../../AGENTS.md)); no secrets in commits; plugin `files` and `prepack` remain consistent; workflows aligned with Node version used in CI.
 
-## Usage
+Open [`skills/code-review/`](.) when reviewing PRs or before release (or point your agent at this folder if supported).
 
-Reference: `@skills/code-review` when reviewing PRs or before release.
+## References
+
+- [references/code-review-checklist.md](references/code-review-checklist.md)
+- [Development workflow](../dev-workflow/SKILL.md)
