@@ -5,6 +5,7 @@
   "author": "Contentstack",
   "bugs": "https://github.com/contentstack/cli-cm-regex-validate/issues",
   "devDependencies": {
+    "@babel/preset-env": "^7.29.5",
     "@oclif/plugin-help": "^6.2.49",
     "@oclif/test": "^3.2.15",
     "@types/chai": "^4.3.20",
