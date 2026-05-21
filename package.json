@@ -1,11 +1,11 @@
 {
   "name": "@contentstack/cli-cm-regex-validate",
   "description": "Validate Fields with Regex Property of Content Type and Global Field in a Stack",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "author": "Contentstack",
   "bugs": "https://github.com/contentstack/cli-cm-regex-validate/issues",
   "devDependencies": {
-    "@oclif/plugin-help": "^6.2.46",
+    "@oclif/plugin-help": "^6.2.49",
     "@oclif/test": "^3.2.15",
     "@types/chai": "^4.3.20",
     "@types/inquirer": "^8.2.12",
@@ -65,13 +65,13 @@
     "prepare": "npx husky && chmod +x .husky/pre-commit"
   },
   "dependencies": {
-    "@contentstack/cli-command": "^1.8.0",
-    "@contentstack/cli-utilities": "^1.18.1",
-    "@contentstack/management": "^1.30.0",
+    "@contentstack/cli-command": "^1.8.2",
+    "@contentstack/cli-utilities": "^1.18.3",
+    "@contentstack/management": "^1.30.2",
     "cli-table3": "^0.6.5",
     "cli-ux": "^6.0.9",
     "inquirer": "^8.2.7",
-    "jest": "^30.3.0",
+    "jest": "^30.4.2",
     "jsonexport": "^3.2.0",
     "safe-regex": "^2.1.1",
     "tslib": "^2.8.1"
@@ -80,5 +80,8 @@
     "shortCommandName": {
       "cm:stacks:validate-regex": "RGXVLD"
     }
+  },
+  "overrides": {
+    "tmp": "^0.2.5"
   }
 }
