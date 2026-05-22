@@ -70,7 +70,7 @@
     "@contentstack/management": "^1.30.2",
     "cli-table3": "^0.6.5",
     "cli-ux": "^6.0.9",
-    "inquirer": "^8.2.7",
+    "inquirer": "12.11.1",
     "jest": "^30.4.2",
     "jsonexport": "^3.2.0",
     "safe-regex": "^2.1.1",
