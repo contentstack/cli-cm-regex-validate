@@ -1,3 +1,6 @@
+> **This repository is archived.** Development continues in the [cli-plugins](https://github.com/contentstack/cli-plugins) monorepo. Open issues at [cli-plugins/issues](https://github.com/contentstack/cli-plugins/issues).  
+> The npm package name is unchanged: **`@contentstack/cli-cm-regex-validate`**.
+
 # Regex Validation CLI Plugin
 
 The “Regex Validation” plugin in Contentstack CLI allows users to search for invalid regexes within the content types and global fields of their stack.
